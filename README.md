@@ -15,14 +15,14 @@
 
 ## 快速开始
 
-启动 HTTP 服务后打开 `samples.html` 选择示例，或直接访问：
+启动 HTTP 服务后打开浏览器：
 
 ```
 python -m http.server 8080
-# 浏览器打开 http://localhost:8080/samples.html
+# 浏览器打开 http://localhost:8080
 ```
 
-直接加载指定数据集：`index.html?sample=taxi`
+或直接加载指定数据集：`chart.html?sample=taxi`
 
 ## 示例场景
 
@@ -37,9 +37,9 @@ python -m http.server 8080
 ## 文件结构
 
 ```
-时间轴图/
-├── index.html            # 主可视化页面
-├── samples.html          # 示例列表页面
+TimeLane/
+├── index.html            # 主页 (示例列表)
+├── chart.html            # 图表查看器
 ├── README.md
 ├── data.json             # 默认数据 (饭店)
 ├── data-taxi.json        # 出租车数据
