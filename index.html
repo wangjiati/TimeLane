@@ -3,461 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TimeLane — 时间轴图</title>
+<title>TimeLane — 示例</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  background: #0f0f23;
-  color: #ccc;
+  background: #0f0f23; color: #ccc;
   font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
-  overflow: hidden;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center;
 }
-#toolbar {
-  display: flex; align-items: center; gap: 8px;
-  padding: 8px 12px; background: #1a1a2e; border-bottom: 1px solid rgba(255,255,255,0.08);
-  flex-shrink: 0; z-index: 10;
+h1 {
+  font-size: 22px; color: #eee; margin: 32px 0 8px;
 }
-#toolbar button {
-  background: #2a2a4a; color: #ccc; border: 1px solid rgba(255,255,255,0.12);
-  padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: 13px;
-  font-family: inherit; white-space: nowrap;
+.subtitle { font-size: 13px; color: #888; margin-bottom: 28px; }
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px; padding: 0 24px; max-width: 1100px; width: 100%;
+  margin-bottom: 40px;
 }
-#toolbar button:hover { background: #3a3a5a; color: #fff; }
-#toolbar button.active { background: #4A90D9; color: #fff; border-color: #4A90D9; }
-#toolbar .separator { width: 1px; height: 20px; background: rgba(255,255,255,0.12); margin: 0 4px; }
-#toolbar span { font-size: 12px; color: #888; }
-#toolbar .toolbar-right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
-
-#main-row {
-  flex: 1; display: flex; flex-direction: row; overflow: hidden;
+.card {
+  background: #1a1a2e; border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px; padding: 24px; cursor: pointer;
+  transition: all 0.2s; text-decoration: none; color: inherit;
+  display: block;
 }
-#chart-wrap {
-  flex: 1; position: relative; overflow-y: auto; overflow-x: hidden; background: #1a1a2e;
+.card:hover {
+  border-color: rgba(255,255,255,0.2);
+  background: #1e1e38;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
 }
-#chart-wrap canvas { display: block; }
-
-#settings-panel {
-  width: 240px; flex-shrink: 0;
-  background: #16162a; border-left: 1px solid rgba(255,255,255,0.08);
-  overflow-y: auto; padding: 12px;
-  display: flex; flex-direction: column; gap: 12px;
-  font-size: 12px; color: #aaa;
+.card .icon { font-size: 32px; margin-bottom: 12px; }
+.card h3 { font-size: 16px; color: #eee; margin-bottom: 8px; }
+.card p { font-size: 12px; color: #999; line-height: 1.6; }
+.card .tag {
+  display: inline-block; font-size: 10px; padding: 2px 8px;
+  border-radius: 10px; margin-top: 10px;
+  background: rgba(255,255,255,0.06); color: #aaa;
 }
-#settings-panel .section {
-  background: rgba(255,255,255,0.025);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 6px;
-  padding: 10px;
-  display: flex; flex-direction: column; gap: 8px;
-}
-#settings-panel .section h3 {
-  font-size: 13px; color: #eee; font-weight: bold;
-  margin: -10px -10px 0 -10px;
-  padding: 8px 10px;
-  background: rgba(255,255,255,0.04);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  border-radius: 6px 6px 0 0;
-}
-#settings-panel label {
-  display: flex; align-items: center; justify-content: space-between;
-  font-size: 12px; color: #bbb; gap: 6px;
-}
-#settings-panel label > span:first-child { flex-shrink: 0; }
-#settings-panel .range-row { display: flex; align-items: center; gap: 6px; }
-#settings-panel .range-row input[type="range"] { flex: 1; min-width: 60px; }
-#settings-panel .range-row .range-val { width: 30px; text-align: right; font-size: 11px; color: #888; flex-shrink: 0; }
-#settings-panel input[type="range"] {
-  accent-color: #4A90D9; cursor: pointer;
-}
-#settings-panel select {
-  background: #2a2a4a; color: #ccc; border: 1px solid rgba(255,255,255,0.15);
-  padding: 4px 8px; border-radius: 4px; font-size: 12px; font-family: inherit;
-  cursor: pointer; min-width: 90px;
-}
-#settings-panel select:hover { border-color: rgba(255,255,255,0.3); }
-#settings-panel input[type="checkbox"] {
-  accent-color: #4A90D9; width: 15px; height: 15px; cursor: pointer;
-}
-#settings-panel .theme-btns {
-  display: flex; flex-wrap: wrap; gap: 6px;
-}
-#settings-panel .theme-btn {
-  flex: 1; min-width: 58px; text-align: center;
-  padding: 6px 4px; border-radius: 4px; cursor: pointer;
-  font-size: 11px; font-family: inherit; border: 1px solid rgba(255,255,255,0.12);
-  background: #2a2a4a; color: #ccc; transition: all 0.15s;
-}
-#settings-panel .theme-btn:hover { border-color: rgba(255,255,255,0.4); color: #fff; }
-#settings-panel .theme-btn.active { border-color: #4A90D9; background: #3a3070; color: #fff; }
-#settings-panel .info-row {
-  display: flex; justify-content: space-between; font-size: 11px; padding: 2px 0;
-}
-#settings-panel .info-label { color: #888; }
-#settings-panel .info-value { color: #ccc; text-align: right; }
-
-#help-overlay {
-  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6);
-  z-index: 2000; justify-content: center; align-items: center;
-}
-#help-overlay.show { display: flex; }
-#help-dialog {
-  background: #1a1a2e; border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 10px; padding: 24px; max-width: 680px; width: 90%;
-  max-height: 80vh; overflow-y: auto; color: #ccc; position: relative;
-}
-#help-dialog h2 { font-size: 18px; color: #fff; margin-bottom: 16px; }
-#help-dialog h3 { font-size: 14px; color: #4A90D9; margin: 16px 0 6px; }
-#help-dialog p, #help-dialog li { font-size: 12px; line-height: 1.7; margin-bottom: 4px; }
-#help-dialog ul { padding-left: 18px; margin-bottom: 8px; }
-#help-dialog .help-diagram {
-  background: #0f0f23; border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 6px; padding: 8px; margin: 12px 0;
-  overflow: hidden;
-}
-#help-close {
-  position: absolute; top: 16px; right: 16px;
-  background: none; border: none; color: #888; font-size: 20px;
-  cursor: pointer; width: 30px; height: 30px; line-height: 30px; text-align: center;
-}
-#help-close:hover { color: #fff; }
-
-#tooltip {
-  position: fixed; pointer-events: none; opacity: 0;
-  background: rgba(20,20,40,0.95); border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 6px; padding: 10px 14px; font-size: 12px; color: #ddd;
-  z-index: 1000; max-width: 220px; line-height: 1.6;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.5); transition: opacity 0.12s;
-}
-#tooltip.visible { opacity: 1; }
-#tooltip .tt-title { font-size: 13px; color: #fff; font-weight: bold; margin-bottom: 4px; }
-#tooltip .tt-row { display: flex; justify-content: space-between; gap: 12px; }
-#tooltip .tt-label { color: #888; }
-#tooltip .tt-value { color: #ddd; text-align: right; }
-
-#chart-wrap::-webkit-scrollbar { width: 8px; }
-#chart-wrap::-webkit-scrollbar-track { background: transparent; }
-#chart-wrap::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 4px; }
-#settings-panel::-webkit-scrollbar { width: 6px; }
-#settings-panel::-webkit-scrollbar-track { background: transparent; }
-#settings-panel::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+.card .tag + .tag { margin-left: 6px; }
 </style>
 </head>
 <body>
-<div id="toolbar">
-  <button id="btn-help" title="使用说明">?</button>
-  <span class="separator"></span>
-  <button id="btn-fit" title="适应全部数据">适应全部</button>
-  <button id="btn-zoomin" title="Ctrl+滚轮放大">+</button>
-  <button id="btn-zoomout" title="Ctrl+滚轮缩小">&minus;</button>
-  <span class="separator"></span>
-  <button id="btn-svg" title="导出 SVG">导出SVG</button>
-  <button id="btn-png" title="导出 PNG">导出PNG</button>
-  <span class="separator"></span>
-  <span id="info-time">--</span>
+
+<h1>TimeLane — 示例场景</h1>
+<p class="subtitle">选择一个示例，查看不同场景下的时间轴可视化效果</p>
+
+<div class="grid">
+  <a class="card" href="chart.html?sample=taxi">
+    <div class="icon">🚕</div>
+    <h3>出租车营收可视化</h3>
+    <p>6辆出租车全天运营情况。色块高度 = 单次营收，色块颜色 = 盈利评级。</p>
+    <span class="tag">24小时</span><span class="tag">6通道</span><span class="tag">1组</span>
+  </a>
+
+  <a class="card" href="chart.html?sample=reading">
+    <div class="icon">📚</div>
+    <h3>学生阅读情况可视化</h3>
+    <p>10位同学4月份阅读记录。色块高度 = 阅读字数，两个班级分组对比。</p>
+    <span class="tag">30天</span><span class="tag">10通道</span><span class="tag">2组</span>
+  </a>
+
+  <a class="card" href="chart.html?sample=airport">
+    <div class="icon">✈️</div>
+    <h3>机场跑道占用可视化</h3>
+    <p>4条跑道24小时起降航班。色块高度 = 延误程度，色块颜色 = 航空公司。</p>
+    <span class="tag">24小时</span><span class="tag">4通道</span><span class="tag">1组</span>
+  </a>
+
+  <a class="card" href="chart.html?sample=restaurant">
+    <div class="icon">🍽️</div>
+    <h3>饭店餐桌收入可视化</h3>
+    <p>20张餐桌3天营业数据。色块高度 = 消费金额，色块颜色 = 满意度。</p>
+    <span class="tag">72小时</span><span class="tag">20通道</span><span class="tag">5组</span>
+  </a>
+
+  <a class="card" href="chart.html?sample=smt">
+    <div class="icon">🏭</div>
+    <h3>SMT产线时长可视化</h3>
+    <p>3条SMT生产线48小时运行。印刷机→SPI→贴片机→AOI，色块高度 = 生产速度。</p>
+    <span class="tag">48小时</span><span class="tag">12通道</span><span class="tag">3组</span>
+  </a>
 </div>
 
-<div id="main-row">
-  <div id="chart-wrap">
-    <canvas id="chart"></canvas>
-  </div>
+<p style="font-size:11px;color:#666;margin-bottom:40px;">数据文件: <code>data-taxi.json</code> <code>data-reading.json</code> <code>data-airport.json</code> <code>data-restaurant.json</code> <code>data-smt.json</code></p>
 
-  <div id="settings-panel">
-    <div class="section">
-      <h3>时间轴</h3>
-      <label>时间格式
-        <select id="cfg-timeFmt">
-          <option value="HH:mm">HH:mm</option>
-          <option value="HH:mm:ss">HH:mm:ss</option>
-          <option value="MM-DD HH:mm">MM-DD HH:mm</option>
-          <option value="YYYY-MM-DD">YYYY-MM-DD</option>
-        </select>
-      </label>
-      <label>网格线
-        <input type="checkbox" id="cfg-grid" checked>
-      </label>
-      <label class="range-row">
-        <span>文字字号</span>
-        <input type="range" id="cfg-timeFont" min="8" max="18" value="11" step="1">
-        <span class="range-val" id="val-timeFont">11</span>
-      </label>
-      <label class="range-row">
-        <span>标签宽度</span>
-        <input type="range" id="cfg-labelW" min="80" max="220" value="140" step="5">
-        <span class="range-val" id="val-labelW">140</span>
-      </label>
-    </div>
-
-    <div class="section">
-      <h3>通道</h3>
-      <label class="range-row">
-        <span>通道高度</span>
-        <input type="range" id="cfg-chHeight" min="10" max="200" value="60" step="5">
-        <span class="range-val" id="val-chHeight">60</span>
-      </label>
-      <label>事件显示
-        <input type="checkbox" id="cfg-events" checked>
-      </label>
-      <label class="range-row">
-        <span>事件字号</span>
-        <input type="range" id="cfg-eventFont" min="6" max="16" value="10" step="1">
-        <span class="range-val" id="val-eventFont">10</span>
-      </label>
-    </div>
-
-    <div class="section">
-      <h3>色块</h3>
-      <label>文字显示
-        <input type="checkbox" id="cfg-textShow" checked>
-      </label>
-      <label>文字位置
-        <select id="cfg-textPos">
-          <option value="center">居中</option>
-          <option value="top">顶部</option>
-          <option value="bottom">底部</option>
-          <option value="above">上方</option>
-        </select>
-      </label>
-      <label class="range-row">
-        <span>文字字号</span>
-        <input type="range" id="cfg-blockFont" min="6" max="16" value="10" step="1">
-        <span class="range-val" id="val-blockFont">10</span>
-      </label>
-    </div>
-
-    <div class="section">
-      <h3>主题配色</h3>
-      <div class="theme-btns">
-        <button class="theme-btn active" data-theme="dark">暗色</button>
-        <button class="theme-btn" data-theme="light">亮色</button>
-        <button class="theme-btn" data-theme="blue">蓝色</button>
-        <button class="theme-btn" data-theme="green">墨绿</button>
-        <button class="theme-btn" data-theme="warm">暖棕</button>
-      </div>
-    </div>
-
-    <div class="section">
-      <h3>信息</h3>
-      <div class="info-row"><span class="info-label">时间范围</span><span class="info-value" id="info-range">--</span></div>
-      <div class="info-row"><span class="info-label">组数</span><span class="info-value" id="info-groups">0</span></div>
-      <div class="info-row"><span class="info-label">通道数</span><span class="info-value" id="info-channels">0</span></div>
-      <div class="info-row"><span class="info-label">色块数</span><span class="info-value" id="info-blocks">0</span></div>
-    </div>
-  </div>
-</div>
-
-<div id="help-overlay">
-  <div id="help-dialog">
-    <button id="help-close">&times;</button>
-    <h2>TimeLane — 使用说明</h2>
-
-    <h3>操作方式</h3>
-    <ul>
-      <li><b>拖拽</b> — 鼠标在图表区按下拖拽平移时间轴</li>
-      <li><b>Ctrl + 滚轮</b> — 以光标位置为中心缩放</li>
-      <li><b>点击分组标题</b> — 折叠 / 展开该分组</li>
-      <li><b>悬停色块</b> — 查看色块属性详情</li>
-      <li><b>普通滚轮</b> — 垂直滚动通道列表</li>
-    </ul>
-
-    <h3>图表元素组成</h3>
-    <div class="help-diagram">
-      <svg viewBox="0 0 660 340" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto;max-width:660px;">
-
-        <defs>
-          <marker id="dot" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="5" markerHeight="5">
-            <circle cx="4" cy="4" r="3.5" fill="#4A90D9" stroke="#fff" stroke-width="1"/>
-          </marker>
-        </defs>
-
-        <!-- Background -->
-        <rect width="660" height="340" fill="#1a1a2e"/>
-        <!-- Label panel -->
-        <rect width="100" height="340" fill="#16162a"/>
-        <!-- Settings panel hint -->
-        <rect x="460" y="0" width="90" height="340" fill="#141422" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-        <text x="505" y="150" text-anchor="middle" fill="#777" font-size="10">设置</text>
-        <text x="505" y="164" text-anchor="middle" fill="#777" font-size="10">面板</text>
-
-        <!-- Chart title -->
-        <text x="280" y="18" text-anchor="middle" fill="#FFD93D" font-size="14" font-weight="bold">📋 饭店营业时间轴</text>
-
-        <!-- Time axis area -->
-        <line x1="100" y1="48" x2="460" y2="48" stroke="#888" stroke-width="1"/>
-        <line x1="160" y1="38" x2="160" y2="48" stroke="rgba(255,255,255,0.15)"/>
-        <line x1="250" y1="38" x2="250" y2="48" stroke="rgba(255,255,255,0.15)"/>
-        <line x1="340" y1="38" x2="340" y2="48" stroke="rgba(255,255,255,0.15)"/>
-        <line x1="430" y1="38" x2="430" y2="48" stroke="rgba(255,255,255,0.15)"/>
-        <text x="160" y="35" text-anchor="middle" fill="#aaa" font-size="10">09:00</text>
-        <text x="250" y="35" text-anchor="middle" fill="#aaa" font-size="10">10:00</text>
-        <text x="340" y="35" text-anchor="middle" fill="#aaa" font-size="10">11:00</text>
-
-        <!-- Group header 1 -->
-        <rect x="100" y="48" width="360" height="24" fill="rgba(255,255,255,0.06)"/>
-        <text x="112" y="64" fill="#ccc" font-size="11" font-weight="bold">▾ 大厅 A区</text>
-
-        <!-- Channel 1 labels -->
-        <text x="8" y="88" fill="#eee" font-size="11" font-weight="bold">桌子 A1</text>
-        <text x="8" y="101" fill="#999" font-size="9">一楼前厅</text>
-
-        <!-- Channel 1 block area -->
-        <rect x="100" y="72" width="360" height="94" fill="#1d1e32"/>
-
-        <!-- Blocks -->
-        <rect x="170" y="112" width="76" height="38" rx="2" fill="#FF6B6B"/>
-        <text x="208" y="135" text-anchor="middle" fill="#fff" font-size="9">4人 午餐</text>
-
-        <rect x="260" y="123" width="56" height="27" rx="2" fill="#FFD93D"/>
-        <text x="288" y="140" text-anchor="middle" fill="#333" font-size="9">下午茶</text>
-
-        <rect x="340" y="132" width="42" height="22" rx="2" fill="#4ECDC4"/>
-        <text x="361" y="147" text-anchor="middle" fill="#fff" font-size="8">简餐</text>
-
-        <rect x="400" y="140" width="32" height="16" rx="2" fill="#45B7D1"/>
-        <text x="416" y="151" text-anchor="middle" fill="#fff" font-size="7">茶</text>
-
-        <!-- Event marker -->
-        <text x="300" y="110" text-anchor="middle" fill="#FF6B6B" font-size="9">上菜</text>
-        <polygon points="300,113 296,118 304,118" fill="#FF6B6B"/>
-
-        <!-- Baseline channel 1 -->
-        <line x1="100" y1="166" x2="460" y2="166" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-
-        <!-- Footer channel 1 -->
-        <text x="108" y="176" fill="#666" font-size="8">全天营业，客流稳定</text>
-
-        <!-- Group header 2 -->
-        <rect x="100" y="180" width="360" height="24" fill="rgba(255,255,255,0.06)"/>
-        <text x="112" y="196" fill="#ccc" font-size="11" font-weight="bold">▾ 包间区</text>
-
-        <!-- Channel 2 labels -->
-        <text x="8" y="220" fill="#eee" font-size="11" font-weight="bold">桌子 包1</text>
-        <text x="8" y="233" fill="#999" font-size="9">二楼包间</text>
-
-        <!-- Channel 2 block area -->
-        <rect x="100" y="204" width="360" height="94" fill="#1b1c30"/>
-
-        <rect x="150" y="238" width="130" height="44" rx="2" fill="#FF4500"/>
-        <text x="215" y="264" text-anchor="middle" fill="#fff" font-size="10">8人 宴会</text>
-
-        <!-- Baseline channel 2 -->
-        <line x1="100" y1="298" x2="460" y2="298" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-
-        <text x="108" y="310" fill="#666" font-size="8">包间最低消费 ¥500</text>
-
-        <!-- ===== ANNOTATIONS ===== -->
-
-        <!-- 1. Chart title -->
-        <line x1="280" y1="24" x2="500" y2="50" stroke="#5DADE2" stroke-width="1" stroke-dasharray="3,2"/>
-        <circle cx="280" cy="12" r="3.5" fill="#5DADE2" stroke="#fff" stroke-width="1"/>
-        <rect x="500" y="42" width="100" height="18" rx="3" fill="#1a2840" stroke="rgba(255,255,255,0.1)"/>
-        <text x="550" y="54" text-anchor="middle" fill="#5DADE2" font-size="10">图表标题</text>
-
-        <!-- 2. Time axis -->
-        <line x1="340" y1="48" x2="500" y2="76" stroke="#5DADE2" stroke-width="1" stroke-dasharray="3,2"/>
-        <circle cx="340" cy="48" r="3.5" fill="#5DADE2" stroke="#fff" stroke-width="1"/>
-        <rect x="500" y="68" width="100" height="18" rx="3" fill="#1a2840" stroke="rgba(255,255,255,0.1)"/>
-        <text x="550" y="80" text-anchor="middle" fill="#5DADE2" font-size="10">时间轴刻度</text>
-
-        <!-- 3. Group header -->
-        <line x1="180" y1="60" x2="500" y2="102" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2"/>
-        <circle cx="180" cy="60" r="3.5" fill="#aaa" stroke="#fff" stroke-width="1"/>
-        <rect x="500" y="94" width="110" height="18" rx="3" fill="#1a2840" stroke="rgba(255,255,255,0.1)"/>
-        <text x="555" y="106" text-anchor="middle" fill="#ccc" font-size="10">分组标题(可折叠)</text>
-
-        <!-- 4. Label panel / Channel title -->
-        <line x1="50" y1="88" x2="500" y2="128" stroke="#eee" stroke-width="1" stroke-dasharray="3,2"/>
-        <circle cx="50" cy="88" r="3.5" fill="#eee" stroke="#fff" stroke-width="1"/>
-        <rect x="500" y="120" width="100" height="18" rx="3" fill="#1a2840" stroke="rgba(255,255,255,0.1)"/>
-        <text x="550" y="132" text-anchor="middle" fill="#eee" font-size="10">标签区/通道标题</text>
-
-        <!-- 5. Block highlight -->
-        <line x1="208" y1="131" x2="500" y2="154" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="3,2"/>
-        <circle cx="208" cy="131" r="3.5" fill="#FF6B6B" stroke="#fff" stroke-width="1"/>
-        <rect x="500" y="146" width="100" height="18" rx="3" fill="#1a2840" stroke="rgba(255,255,255,0.1)"/>
-        <text x="550" y="158" text-anchor="middle" fill="#FF6B6B" font-size="10">色块+文字</text>
-
-        <!-- 6. Event marker -->
-        <line x1="300" y1="115" x2="500" y2="180" stroke="#66BB6A" stroke-width="1" stroke-dasharray="3,2"/>
-        <circle cx="300" cy="112" r="3.5" fill="#66BB6A" stroke="#fff" stroke-width="1"/>
-        <rect x="500" y="172" width="100" height="18" rx="3" fill="#1a2840" stroke="rgba(255,255,255,0.1)"/>
-        <text x="550" y="184" text-anchor="middle" fill="#66BB6A" font-size="10">事件标注</text>
-
-        <!-- 7. Baseline -->
-        <line x1="280" y1="166" x2="500" y2="206" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
-        <circle cx="280" cy="166" r="3.5" fill="#999" stroke="#fff" stroke-width="1"/>
-        <rect x="500" y="198" width="100" height="18" rx="3" fill="#1a2840" stroke="rgba(255,255,255,0.1)"/>
-        <text x="550" y="210" text-anchor="middle" fill="#999" font-size="10">基线</text>
-
-        <!-- 8. Footer -->
-        <line x1="140" y1="176" x2="500" y2="232" stroke="#666" stroke-width="1" stroke-dasharray="3,2"/>
-        <circle cx="140" cy="176" r="3.5" fill="#666" stroke="#fff" stroke-width="1"/>
-        <rect x="500" y="224" width="100" height="18" rx="3" fill="#1a2840" stroke="rgba(255,255,255,0.1)"/>
-        <text x="550" y="236" text-anchor="middle" fill="#666" font-size="10">底部文字</text>
-
-      </svg>
-    </div>
-
-    <ul>
-      <li><b>色块长度(X轴)</b> = 事项的持续时间</li>
-      <li><b>色块高度(Y轴)</b> = 事项的某项属性(百分比)</li>
-      <li><b>色块颜色</b> = 由数据直接指定色值</li>
-      <li><b>事件标注(▲)</b> = 时间点上的文字标注</li>
-      <li><b>通道底部文字</b> = 可选说明</li>
-    </ul>
-
-    <h3>数据格式</h3>
-    <p>使用 JSON 格式。顶层 <b>groups</b> 数组包含多个分组，每个分组下有 <b>channels</b> 数组。</p>
-    <p>每个通道包含 <b>blocks</b>(色块列表) 和可选的 <b>events</b>(事件标注列表)。</p>
-    <p style="color:#888;margin-top:8px;">完整 JSON 结构示例：</p>
-    <pre style="background:#0f0f23;border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:12px;font-size:11px;line-height:1.5;overflow-x:auto;color:#aaa;">{
-  "groups": [{
-    "title": "大厅",
-    "channels": [{
-      "title": "桌子 1",
-      "description": "靠窗四人桌",
-      "footer": "全天营业",
-      "blocks": [{
-        "start": "2024-05-01T09:30:00",
-        "end": "2024-05-01T10:45:00",
-        "heightPercent": 24,
-        "color": "#FF6B6B",
-        "text": "4人 午餐",
-        "textConfig": { "show": true, "color": "#fff", "size": 11 },
-        "properties": { "收入": "¥480", "人数": "4人", "满意度": "满意" }
-      }],
-      "events": [{
-        "time": "2024-05-01T11:10:00",
-        "text": "上菜",
-        "color": "#FF6B6B"
-      }]
-    }]
-  }],
-  "config": {
-    "chartTitle": "饭店餐桌收入可视化",
-    "channelHeight": 60,
-    "timeFormat": "HH:mm",
-    "timeFontSize": 11,
-    "blockFontSize": 10,
-    "eventFontSize": 10,
-    "showEvents": true,
-    "showGridLines": true
-  }
-}</pre>
-
-    <h3>导出</h3>
-    <ul>
-      <li><b>导出 SVG</b> — 矢量格式，可无损放大</li>
-      <li><b>导出 PNG</b> — 位图格式，2x 分辨率</li>
-    </ul>
-  </div>
-</div>
-
-<div id="tooltip"></div>
-
-<script src="js/chart.js"></script>
-<script src="js/main.js"></script>
 </body>
 </html>
