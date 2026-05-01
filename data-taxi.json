@@ -1,0 +1,1779 @@
+{
+  "groups": [
+    {
+      "title": "出租车队",
+      "description": "6辆运营车辆",
+      "channels": [
+        {
+          "title": "出租车 T01",
+          "description": "全天运营",
+          "footer": "",
+          "blocks": [
+            {
+              "start": "2024-05-01T05:04:00",
+              "end": "2024-05-01T05:43:00",
+              "heightPercent": 40.5,
+              "color": "#FFD93D",
+              "text": "¥81",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥81",
+                "时长": "39min",
+                "评级": "中"
+              }
+            },
+            {
+              "start": "2024-05-01T06:09:00",
+              "end": "2024-05-01T07:29:00",
+              "heightPercent": 67.5,
+              "color": "#4ECDC4",
+              "text": "¥135",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥135",
+                "时长": "80min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T07:40:00",
+              "end": "2024-05-01T08:53:00",
+              "heightPercent": 71.5,
+              "color": "#4ECDC4",
+              "text": "¥143",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥143",
+                "时长": "73min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T09:14:00",
+              "end": "2024-05-01T10:21:00",
+              "heightPercent": 100,
+              "color": "#FF4500",
+              "text": "¥200",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥200",
+                "时长": "67min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T10:35:00",
+              "end": "2024-05-01T10:56:00",
+              "heightPercent": 46.5,
+              "color": "#FFD93D",
+              "text": "¥93",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥93",
+                "时长": "21min",
+                "评级": "中"
+              }
+            },
+            {
+              "start": "2024-05-01T11:08:00",
+              "end": "2024-05-01T11:58:00",
+              "heightPercent": 86,
+              "color": "#4ECDC4",
+              "text": "¥172",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥172",
+                "时长": "50min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T12:07:00",
+              "end": "2024-05-01T12:55:00",
+              "heightPercent": 34,
+              "color": "#4ECDC4",
+              "text": "¥68",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥68",
+                "时长": "48min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T13:24:00",
+              "end": "2024-05-01T14:37:00",
+              "heightPercent": 38,
+              "color": "#FF4500",
+              "text": "¥76",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥76",
+                "时长": "73min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T14:57:00",
+              "end": "2024-05-01T15:19:00",
+              "heightPercent": 42.5,
+              "color": "#45B7D1",
+              "text": "¥85",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥85",
+                "时长": "22min",
+                "评级": "低"
+              }
+            },
+            {
+              "start": "2024-05-01T15:35:00",
+              "end": "2024-05-01T17:00:00",
+              "heightPercent": 98.5,
+              "color": "#4ECDC4",
+              "text": "¥197",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥197",
+                "时长": "85min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T17:22:00",
+              "end": "2024-05-01T18:38:00",
+              "heightPercent": 33.5,
+              "color": "#4ECDC4",
+              "text": "¥67",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥67",
+                "时长": "76min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T18:57:00",
+              "end": "2024-05-01T19:22:00",
+              "heightPercent": 38.5,
+              "color": "#FF6B6B",
+              "text": "¥77",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥77",
+                "时长": "25min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T19:35:00",
+              "end": "2024-05-01T20:10:00",
+              "heightPercent": 74.5,
+              "color": "#FF4500",
+              "text": "¥149",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥149",
+                "时长": "35min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T20:16:00",
+              "end": "2024-05-01T20:56:00",
+              "heightPercent": 32,
+              "color": "#45B7D1",
+              "text": "¥64",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥64",
+                "时长": "40min",
+                "评级": "低"
+              }
+            },
+            {
+              "start": "2024-05-01T21:22:00",
+              "end": "2024-05-01T21:47:00",
+              "heightPercent": 33.5,
+              "color": "#FF6B6B",
+              "text": "¥67",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥67",
+                "时长": "25min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T21:57:00",
+              "end": "2024-05-01T23:00:00",
+              "heightPercent": 40.5,
+              "color": "#FF6B6B",
+              "text": "¥81",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥81",
+                "时长": "63min",
+                "评级": "良"
+              }
+            }
+          ],
+          "events": [
+            {
+              "time": "2024-05-01T07:01:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T10:46:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T11:17:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T19:49:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "title": "出租车 T02",
+          "description": "全天运营",
+          "footer": "",
+          "blocks": [
+            {
+              "start": "2024-05-01T07:43:00",
+              "end": "2024-05-01T08:03:00",
+              "heightPercent": 54.5,
+              "color": "#4ECDC4",
+              "text": "¥109",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥109",
+                "时长": "20min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T08:28:00",
+              "end": "2024-05-01T08:55:00",
+              "heightPercent": 31.5,
+              "color": "#FF6B6B",
+              "text": "¥63",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥63",
+                "时长": "27min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T09:22:00",
+              "end": "2024-05-01T10:25:00",
+              "heightPercent": 40,
+              "color": "#FF6B6B",
+              "text": "¥80",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥80",
+                "时长": "63min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T10:37:00",
+              "end": "2024-05-01T11:36:00",
+              "heightPercent": 62.5,
+              "color": "#FF4500",
+              "text": "¥125",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥125",
+                "时长": "59min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T12:01:00",
+              "end": "2024-05-01T12:46:00",
+              "heightPercent": 94,
+              "color": "#FF4500",
+              "text": "¥188",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥188",
+                "时长": "45min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T13:16:00",
+              "end": "2024-05-01T13:51:00",
+              "heightPercent": 18,
+              "color": "#FF4500",
+              "text": "¥36",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥36",
+                "时长": "35min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T14:20:00",
+              "end": "2024-05-01T15:44:00",
+              "heightPercent": 62.5,
+              "color": "#FF4500",
+              "text": "¥125",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥125",
+                "时长": "84min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T15:58:00",
+              "end": "2024-05-01T16:24:00",
+              "heightPercent": 37.5,
+              "color": "#4ECDC4",
+              "text": "¥75",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥75",
+                "时长": "26min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T16:47:00",
+              "end": "2024-05-01T17:32:00",
+              "heightPercent": 31,
+              "color": "#FFD93D",
+              "text": "¥62",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥62",
+                "时长": "45min",
+                "评级": "中"
+              }
+            },
+            {
+              "start": "2024-05-01T17:57:00",
+              "end": "2024-05-01T19:03:00",
+              "heightPercent": 25.5,
+              "color": "#4ECDC4",
+              "text": "¥51",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥51",
+                "时长": "66min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T19:24:00",
+              "end": "2024-05-01T20:38:00",
+              "heightPercent": 46.5,
+              "color": "#FF6B6B",
+              "text": "¥93",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥93",
+                "时长": "74min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T20:54:00",
+              "end": "2024-05-01T21:48:00",
+              "heightPercent": 41,
+              "color": "#FF4500",
+              "text": "¥82",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥82",
+                "时长": "54min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T22:11:00",
+              "end": "2024-05-01T23:00:00",
+              "heightPercent": 47,
+              "color": "#45B7D1",
+              "text": "¥94",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥94",
+                "时长": "49min",
+                "评级": "低"
+              }
+            }
+          ],
+          "events": [
+            {
+              "time": "2024-05-01T11:31:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T13:23:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T19:49:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "title": "出租车 T03",
+          "description": "全天运营",
+          "footer": "",
+          "blocks": [
+            {
+              "start": "2024-05-01T05:22:00",
+              "end": "2024-05-01T06:34:00",
+              "heightPercent": 28,
+              "color": "#FFD93D",
+              "text": "¥56",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥56",
+                "时长": "72min",
+                "评级": "中"
+              }
+            },
+            {
+              "start": "2024-05-01T06:48:00",
+              "end": "2024-05-01T07:39:00",
+              "heightPercent": 95.5,
+              "color": "#FFD93D",
+              "text": "¥191",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥191",
+                "时长": "51min",
+                "评级": "中"
+              }
+            },
+            {
+              "start": "2024-05-01T08:09:00",
+              "end": "2024-05-01T09:36:00",
+              "heightPercent": 28,
+              "color": "#FF4500",
+              "text": "¥56",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥56",
+                "时长": "87min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T10:04:00",
+              "end": "2024-05-01T10:46:00",
+              "heightPercent": 46.5,
+              "color": "#45B7D1",
+              "text": "¥93",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥93",
+                "时长": "42min",
+                "评级": "低"
+              }
+            },
+            {
+              "start": "2024-05-01T10:59:00",
+              "end": "2024-05-01T11:23:00",
+              "heightPercent": 47,
+              "color": "#FF4500",
+              "text": "¥94",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥94",
+                "时长": "24min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T11:51:00",
+              "end": "2024-05-01T13:13:00",
+              "heightPercent": 18.5,
+              "color": "#45B7D1",
+              "text": "¥37",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥37",
+                "时长": "82min",
+                "评级": "低"
+              }
+            },
+            {
+              "start": "2024-05-01T13:19:00",
+              "end": "2024-05-01T14:48:00",
+              "heightPercent": 50.5,
+              "color": "#FFD93D",
+              "text": "¥101",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥101",
+                "时长": "89min",
+                "评级": "中"
+              }
+            },
+            {
+              "start": "2024-05-01T15:04:00",
+              "end": "2024-05-01T16:09:00",
+              "heightPercent": 32.5,
+              "color": "#4ECDC4",
+              "text": "¥65",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥65",
+                "时长": "65min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T16:39:00",
+              "end": "2024-05-01T17:01:00",
+              "heightPercent": 63.5,
+              "color": "#45B7D1",
+              "text": "¥127",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥127",
+                "时长": "22min",
+                "评级": "低"
+              }
+            },
+            {
+              "start": "2024-05-01T17:07:00",
+              "end": "2024-05-01T18:08:00",
+              "heightPercent": 91.5,
+              "color": "#45B7D1",
+              "text": "¥183",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥183",
+                "时长": "61min",
+                "评级": "低"
+              }
+            },
+            {
+              "start": "2024-05-01T18:28:00",
+              "end": "2024-05-01T18:44:00",
+              "heightPercent": 22.5,
+              "color": "#FF6B6B",
+              "text": "¥45",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥45",
+                "时长": "16min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T19:01:00",
+              "end": "2024-05-01T19:35:00",
+              "heightPercent": 78.5,
+              "color": "#FF6B6B",
+              "text": "¥157",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥157",
+                "时长": "34min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T19:56:00",
+              "end": "2024-05-01T20:29:00",
+              "heightPercent": 68.5,
+              "color": "#4ECDC4",
+              "text": "¥137",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥137",
+                "时长": "33min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T20:39:00",
+              "end": "2024-05-01T21:54:00",
+              "heightPercent": 46.5,
+              "color": "#FFD93D",
+              "text": "¥93",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥93",
+                "时长": "75min",
+                "评级": "中"
+              }
+            },
+            {
+              "start": "2024-05-01T22:07:00",
+              "end": "2024-05-01T23:00:00",
+              "heightPercent": 31,
+              "color": "#4ECDC4",
+              "text": "¥62",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥62",
+                "时长": "53min",
+                "评级": "一般"
+              }
+            }
+          ],
+          "events": [
+            {
+              "time": "2024-05-01T11:12:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T17:55:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T20:10:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T21:42:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "title": "出租车 T04",
+          "description": "全天运营",
+          "footer": "",
+          "blocks": [
+            {
+              "start": "2024-05-01T07:07:00",
+              "end": "2024-05-01T07:30:00",
+              "heightPercent": 57.5,
+              "color": "#FF4500",
+              "text": "¥115",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥115",
+                "时长": "23min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T07:39:00",
+              "end": "2024-05-01T08:19:00",
+              "heightPercent": 54,
+              "color": "#45B7D1",
+              "text": "¥108",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥108",
+                "时长": "40min",
+                "评级": "低"
+              }
+            },
+            {
+              "start": "2024-05-01T08:38:00",
+              "end": "2024-05-01T09:52:00",
+              "heightPercent": 69.5,
+              "color": "#FFD93D",
+              "text": "¥139",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥139",
+                "时长": "74min",
+                "评级": "中"
+              }
+            },
+            {
+              "start": "2024-05-01T10:12:00",
+              "end": "2024-05-01T11:19:00",
+              "heightPercent": 22.5,
+              "color": "#4ECDC4",
+              "text": "¥45",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥45",
+                "时长": "67min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T11:47:00",
+              "end": "2024-05-01T12:27:00",
+              "heightPercent": 91.5,
+              "color": "#4ECDC4",
+              "text": "¥183",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥183",
+                "时长": "40min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T12:55:00",
+              "end": "2024-05-01T13:11:00",
+              "heightPercent": 41.5,
+              "color": "#FF6B6B",
+              "text": "¥83",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥83",
+                "时长": "16min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T13:35:00",
+              "end": "2024-05-01T14:52:00",
+              "heightPercent": 75.5,
+              "color": "#FF6B6B",
+              "text": "¥151",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥151",
+                "时长": "77min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T15:15:00",
+              "end": "2024-05-01T16:06:00",
+              "heightPercent": 68,
+              "color": "#FF6B6B",
+              "text": "¥136",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥136",
+                "时长": "51min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T16:19:00",
+              "end": "2024-05-01T17:33:00",
+              "heightPercent": 56,
+              "color": "#45B7D1",
+              "text": "¥112",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥112",
+                "时长": "74min",
+                "评级": "低"
+              }
+            },
+            {
+              "start": "2024-05-01T17:48:00",
+              "end": "2024-05-01T18:55:00",
+              "heightPercent": 35.5,
+              "color": "#FFD93D",
+              "text": "¥71",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥71",
+                "时长": "67min",
+                "评级": "中"
+              }
+            },
+            {
+              "start": "2024-05-01T19:15:00",
+              "end": "2024-05-01T19:54:00",
+              "heightPercent": 93.5,
+              "color": "#FFD93D",
+              "text": "¥187",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥187",
+                "时长": "39min",
+                "评级": "中"
+              }
+            },
+            {
+              "start": "2024-05-01T20:14:00",
+              "end": "2024-05-01T21:19:00",
+              "heightPercent": 75.5,
+              "color": "#FF4500",
+              "text": "¥151",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥151",
+                "时长": "65min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T21:24:00",
+              "end": "2024-05-01T21:53:00",
+              "heightPercent": 90,
+              "color": "#FF4500",
+              "text": "¥180",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥180",
+                "时长": "29min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T22:04:00",
+              "end": "2024-05-01T23:00:00",
+              "heightPercent": 23.5,
+              "color": "#45B7D1",
+              "text": "¥47",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥47",
+                "时长": "56min",
+                "评级": "低"
+              }
+            }
+          ],
+          "events": [
+            {
+              "time": "2024-05-01T13:05:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T15:39:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T20:51:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "title": "出租车 T05",
+          "description": "全天运营",
+          "footer": "",
+          "blocks": [
+            {
+              "start": "2024-05-01T05:33:00",
+              "end": "2024-05-01T06:09:00",
+              "heightPercent": 62.5,
+              "color": "#FF6B6B",
+              "text": "¥125",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥125",
+                "时长": "36min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T06:25:00",
+              "end": "2024-05-01T07:55:00",
+              "heightPercent": 37,
+              "color": "#45B7D1",
+              "text": "¥74",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥74",
+                "时长": "90min",
+                "评级": "低"
+              }
+            },
+            {
+              "start": "2024-05-01T08:21:00",
+              "end": "2024-05-01T09:16:00",
+              "heightPercent": 87.5,
+              "color": "#45B7D1",
+              "text": "¥175",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥175",
+                "时长": "55min",
+                "评级": "低"
+              }
+            },
+            {
+              "start": "2024-05-01T09:36:00",
+              "end": "2024-05-01T10:17:00",
+              "heightPercent": 81.5,
+              "color": "#FFD93D",
+              "text": "¥163",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥163",
+                "时长": "41min",
+                "评级": "中"
+              }
+            },
+            {
+              "start": "2024-05-01T10:44:00",
+              "end": "2024-05-01T11:35:00",
+              "heightPercent": 85.5,
+              "color": "#45B7D1",
+              "text": "¥171",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥171",
+                "时长": "51min",
+                "评级": "低"
+              }
+            },
+            {
+              "start": "2024-05-01T11:50:00",
+              "end": "2024-05-01T12:59:00",
+              "heightPercent": 36.5,
+              "color": "#FF4500",
+              "text": "¥73",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥73",
+                "时长": "69min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T13:06:00",
+              "end": "2024-05-01T14:29:00",
+              "heightPercent": 68,
+              "color": "#FF4500",
+              "text": "¥136",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥136",
+                "时长": "83min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T14:47:00",
+              "end": "2024-05-01T15:55:00",
+              "heightPercent": 45.5,
+              "color": "#FF6B6B",
+              "text": "¥91",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥91",
+                "时长": "68min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T16:07:00",
+              "end": "2024-05-01T17:07:00",
+              "heightPercent": 65.5,
+              "color": "#FF4500",
+              "text": "¥131",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥131",
+                "时长": "60min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T17:17:00",
+              "end": "2024-05-01T18:39:00",
+              "heightPercent": 65,
+              "color": "#FF6B6B",
+              "text": "¥130",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥130",
+                "时长": "82min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T18:52:00",
+              "end": "2024-05-01T19:50:00",
+              "heightPercent": 33.5,
+              "color": "#4ECDC4",
+              "text": "¥67",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥67",
+                "时长": "58min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T20:14:00",
+              "end": "2024-05-01T21:08:00",
+              "heightPercent": 34.5,
+              "color": "#45B7D1",
+              "text": "¥69",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥69",
+                "时长": "54min",
+                "评级": "低"
+              }
+            },
+            {
+              "start": "2024-05-01T21:15:00",
+              "end": "2024-05-01T21:48:00",
+              "heightPercent": 76.5,
+              "color": "#FFD93D",
+              "text": "¥153",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥153",
+                "时长": "33min",
+                "评级": "中"
+              }
+            },
+            {
+              "start": "2024-05-01T22:11:00",
+              "end": "2024-05-01T22:28:00",
+              "heightPercent": 21,
+              "color": "#FFD93D",
+              "text": "¥42",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥42",
+                "时长": "17min",
+                "评级": "中"
+              }
+            }
+          ],
+          "events": [
+            {
+              "time": "2024-05-01T07:32:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T08:55:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T12:06:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T13:37:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T17:56:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "title": "出租车 T06",
+          "description": "全天运营",
+          "footer": "",
+          "blocks": [
+            {
+              "start": "2024-05-01T05:44:00",
+              "end": "2024-05-01T06:44:00",
+              "heightPercent": 32,
+              "color": "#4ECDC4",
+              "text": "¥64",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥64",
+                "时长": "60min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T06:54:00",
+              "end": "2024-05-01T08:04:00",
+              "heightPercent": 47,
+              "color": "#FF4500",
+              "text": "¥94",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥94",
+                "时长": "70min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T08:16:00",
+              "end": "2024-05-01T08:56:00",
+              "heightPercent": 70,
+              "color": "#FFD93D",
+              "text": "¥140",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥140",
+                "时长": "40min",
+                "评级": "中"
+              }
+            },
+            {
+              "start": "2024-05-01T09:23:00",
+              "end": "2024-05-01T10:06:00",
+              "heightPercent": 98.5,
+              "color": "#FF6B6B",
+              "text": "¥197",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥197",
+                "时长": "43min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T10:36:00",
+              "end": "2024-05-01T11:25:00",
+              "heightPercent": 78.5,
+              "color": "#FF4500",
+              "text": "¥157",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥157",
+                "时长": "49min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T11:32:00",
+              "end": "2024-05-01T12:14:00",
+              "heightPercent": 42.5,
+              "color": "#FF6B6B",
+              "text": "¥85",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥85",
+                "时长": "42min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T12:24:00",
+              "end": "2024-05-01T12:54:00",
+              "heightPercent": 34.5,
+              "color": "#4ECDC4",
+              "text": "¥69",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥69",
+                "时长": "30min",
+                "评级": "一般"
+              }
+            },
+            {
+              "start": "2024-05-01T13:03:00",
+              "end": "2024-05-01T14:05:00",
+              "heightPercent": 95,
+              "color": "#45B7D1",
+              "text": "¥190",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥190",
+                "时长": "62min",
+                "评级": "低"
+              }
+            },
+            {
+              "start": "2024-05-01T14:32:00",
+              "end": "2024-05-01T15:15:00",
+              "heightPercent": 99.5,
+              "color": "#FFD93D",
+              "text": "¥199",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥199",
+                "时长": "43min",
+                "评级": "中"
+              }
+            },
+            {
+              "start": "2024-05-01T15:30:00",
+              "end": "2024-05-01T16:27:00",
+              "heightPercent": 83,
+              "color": "#FF4500",
+              "text": "¥166",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥166",
+                "时长": "57min",
+                "评级": "优"
+              }
+            },
+            {
+              "start": "2024-05-01T16:41:00",
+              "end": "2024-05-01T17:49:00",
+              "heightPercent": 60.5,
+              "color": "#FF6B6B",
+              "text": "¥121",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥121",
+                "时长": "68min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T18:05:00",
+              "end": "2024-05-01T19:08:00",
+              "heightPercent": 23,
+              "color": "#45B7D1",
+              "text": "¥46",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥46",
+                "时长": "63min",
+                "评级": "低"
+              }
+            },
+            {
+              "start": "2024-05-01T19:13:00",
+              "end": "2024-05-01T19:30:00",
+              "heightPercent": 58.5,
+              "color": "#FFD93D",
+              "text": "¥117",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥117",
+                "时长": "17min",
+                "评级": "中"
+              }
+            },
+            {
+              "start": "2024-05-01T19:56:00",
+              "end": "2024-05-01T20:13:00",
+              "heightPercent": 55,
+              "color": "#45B7D1",
+              "text": "¥110",
+              "textConfig": {
+                "show": true,
+                "color": "#333",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥110",
+                "时长": "17min",
+                "评级": "低"
+              }
+            },
+            {
+              "start": "2024-05-01T20:23:00",
+              "end": "2024-05-01T20:56:00",
+              "heightPercent": 91,
+              "color": "#FF6B6B",
+              "text": "¥182",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥182",
+                "时长": "33min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T21:22:00",
+              "end": "2024-05-01T21:37:00",
+              "heightPercent": 83.5,
+              "color": "#FF6B6B",
+              "text": "¥167",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥167",
+                "时长": "15min",
+                "评级": "良"
+              }
+            },
+            {
+              "start": "2024-05-01T21:57:00",
+              "end": "2024-05-01T23:00:00",
+              "heightPercent": 67.5,
+              "color": "#FF4500",
+              "text": "¥135",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 10
+              },
+              "properties": {
+                "收入": "¥135",
+                "时长": "63min",
+                "评级": "优"
+              }
+            }
+          ],
+          "events": [
+            {
+              "time": "2024-05-01T07:45:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T08:27:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T12:36:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T15:09:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T15:45:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T18:40:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T19:19:00",
+              "text": "接单",
+              "color": "#FF6B6B",
+              "size": 10
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {
+    "defaultBlockColor": "#4A90D9",
+    "minBlockHeightPx": 2,
+    "minBlockWidthPx": 2,
+    "fontFamily": "'Microsoft YaHei','PingFang SC',sans-serif",
+    "blockBorderRadius": 2,
+    "blockBorderWidth": 0,
+    "blockBorderColor": "rgba(0,0,0,0.2)",
+    "theme": {
+      "backgroundColor": "#1a1a2e",
+      "labelBgColor": "#16162a",
+      "channelBgColor": "#1b1c30",
+      "channelBgAltColor": "#1d1e32",
+      "groupHeaderBgColor": "rgba(255,255,255,0.05)",
+      "groupHeaderTextColor": "#ddd",
+      "baselineColor": "rgba(255,255,255,0.12)",
+      "timeAxisColor": "#888",
+      "timeTextColor": "#aaa",
+      "timeTickColor": "rgba(255,255,255,0.15)",
+      "headerTitleColor": "#eee",
+      "headerDescColor": "#999",
+      "footerColor": "#666",
+      "gridLineColor": "rgba(255,255,255,0.04)",
+      "eventMarkerColor": "#FF6B6B",
+      "hoverBorderColor": "#fff",
+      "labelSeparatorColor": "rgba(255,255,255,0.08)"
+    },
+    "chartTitle": "出租车营收可视化",
+    "channelHeight": 70,
+    "timeFormat": "HH:mm",
+    "timeFontSize": 11,
+    "blockFontSize": 10,
+    "eventFontSize": 10,
+    "zoomMin": 0.01,
+    "zoomMax": 200,
+    "showEvents": true,
+    "blockTextPosition": "center",
+    "blockTextShow": true,
+    "showGridLines": true,
+    "labelWidth": 120,
+    "timeAxisHeight": 48,
+    "headerHeight": 34,
+    "footerHeight": 16,
+    "groupHeaderHeight": 28,
+    "chartTitleHeight": 30
+  }
+}

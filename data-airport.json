@@ -1,0 +1,3454 @@
+{
+  "groups": [
+    {
+      "title": "跑道",
+      "description": "机场跑道占用",
+      "channels": [
+        {
+          "title": "R1 北跑道",
+          "description": "航班起降",
+          "footer": "",
+          "blocks": [
+            {
+              "start": "2024-05-01T00:00:00",
+              "end": "2024-05-01T00:18:00",
+              "heightPercent": 10.5,
+              "color": "#3498DB",
+              "text": "CZ348",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ348",
+                "操作": "降落",
+                "延误": "4min"
+              }
+            },
+            {
+              "start": "2024-05-01T00:29:00",
+              "end": "2024-05-01T01:06:00",
+              "heightPercent": 23.7,
+              "color": "#2ECC71",
+              "text": "HU306",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU306",
+                "操作": "降落",
+                "延误": "9min"
+              }
+            },
+            {
+              "start": "2024-05-01T01:13:00",
+              "end": "2024-05-01T01:25:00",
+              "heightPercent": 0,
+              "color": "#3498DB",
+              "text": "3U833",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U833",
+                "操作": "降落",
+                "延误": "0min"
+              }
+            },
+            {
+              "start": "2024-05-01T01:35:00",
+              "end": "2024-05-01T01:43:00",
+              "heightPercent": 2.6,
+              "color": "#F39C12",
+              "text": "3U854",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U854",
+                "操作": "起飞",
+                "延误": "1min"
+              }
+            },
+            {
+              "start": "2024-05-01T01:58:00",
+              "end": "2024-05-01T02:20:00",
+              "heightPercent": 7.9,
+              "color": "#E74C3C",
+              "text": "3U960",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U960",
+                "操作": "起飞",
+                "延误": "3min"
+              }
+            },
+            {
+              "start": "2024-05-01T02:34:00",
+              "end": "2024-05-01T02:52:00",
+              "heightPercent": 73.7,
+              "color": "#E74C3C",
+              "text": "CA651",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA651",
+                "操作": "降落",
+                "延误": "28min"
+              }
+            },
+            {
+              "start": "2024-05-01T03:04:00",
+              "end": "2024-05-01T03:37:00",
+              "heightPercent": 18.4,
+              "color": "#9B59B6",
+              "text": "3U413",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U413",
+                "操作": "降落",
+                "延误": "7min"
+              }
+            },
+            {
+              "start": "2024-05-01T03:48:00",
+              "end": "2024-05-01T04:09:00",
+              "heightPercent": 10.5,
+              "color": "#E74C3C",
+              "text": "CA320",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA320",
+                "操作": "降落",
+                "延误": "4min"
+              }
+            },
+            {
+              "start": "2024-05-01T04:16:00",
+              "end": "2024-05-01T04:26:00",
+              "heightPercent": 10.5,
+              "color": "#E74C3C",
+              "text": "CZ748",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ748",
+                "操作": "起飞",
+                "延误": "4min"
+              }
+            },
+            {
+              "start": "2024-05-01T04:41:00",
+              "end": "2024-05-01T05:01:00",
+              "heightPercent": 7.9,
+              "color": "#F39C12",
+              "text": "CA498",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA498",
+                "操作": "起飞",
+                "延误": "3min"
+              }
+            },
+            {
+              "start": "2024-05-01T05:12:00",
+              "end": "2024-05-01T05:50:00",
+              "heightPercent": 21.1,
+              "color": "#2ECC71",
+              "text": "CZ483",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ483",
+                "操作": "起飞",
+                "延误": "8min"
+              }
+            },
+            {
+              "start": "2024-05-01T05:52:00",
+              "end": "2024-05-01T06:14:00",
+              "heightPercent": 26.3,
+              "color": "#E74C3C",
+              "text": "MU999",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU999",
+                "操作": "降落",
+                "延误": "10min"
+              }
+            },
+            {
+              "start": "2024-05-01T06:18:00",
+              "end": "2024-05-01T06:34:00",
+              "heightPercent": 23.7,
+              "color": "#F39C12",
+              "text": "CA892",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA892",
+                "操作": "降落",
+                "延误": "9min"
+              }
+            },
+            {
+              "start": "2024-05-01T06:38:00",
+              "end": "2024-05-01T06:57:00",
+              "heightPercent": 47.4,
+              "color": "#F39C12",
+              "text": "MU607",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU607",
+                "操作": "起飞",
+                "延误": "18min"
+              }
+            },
+            {
+              "start": "2024-05-01T07:03:00",
+              "end": "2024-05-01T07:42:00",
+              "heightPercent": 0,
+              "color": "#3498DB",
+              "text": "CA775",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA775",
+                "操作": "降落",
+                "延误": "0min"
+              }
+            },
+            {
+              "start": "2024-05-01T07:53:00",
+              "end": "2024-05-01T08:24:00",
+              "heightPercent": 50,
+              "color": "#F39C12",
+              "text": "MU967",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU967",
+                "操作": "降落",
+                "延误": "19min"
+              }
+            },
+            {
+              "start": "2024-05-01T08:27:00",
+              "end": "2024-05-01T08:32:00",
+              "heightPercent": 10.5,
+              "color": "#F39C12",
+              "text": "CZ705",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ705",
+                "操作": "起飞",
+                "延误": "4min"
+              }
+            },
+            {
+              "start": "2024-05-01T08:45:00",
+              "end": "2024-05-01T09:04:00",
+              "heightPercent": 76.3,
+              "color": "#3498DB",
+              "text": "CA667",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA667",
+                "操作": "起飞",
+                "延误": "29min"
+              }
+            },
+            {
+              "start": "2024-05-01T09:08:00",
+              "end": "2024-05-01T09:18:00",
+              "heightPercent": 2.6,
+              "color": "#9B59B6",
+              "text": "CZ590",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ590",
+                "操作": "起飞",
+                "延误": "1min"
+              }
+            },
+            {
+              "start": "2024-05-01T09:27:00",
+              "end": "2024-05-01T09:51:00",
+              "heightPercent": 10.5,
+              "color": "#E74C3C",
+              "text": "HU564",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU564",
+                "操作": "降落",
+                "延误": "4min"
+              }
+            },
+            {
+              "start": "2024-05-01T10:05:00",
+              "end": "2024-05-01T10:15:00",
+              "heightPercent": 21.1,
+              "color": "#2ECC71",
+              "text": "CZ595",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ595",
+                "操作": "降落",
+                "延误": "8min"
+              }
+            },
+            {
+              "start": "2024-05-01T10:22:00",
+              "end": "2024-05-01T10:46:00",
+              "heightPercent": 15.8,
+              "color": "#2ECC71",
+              "text": "3U625",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U625",
+                "操作": "起飞",
+                "延误": "6min"
+              }
+            },
+            {
+              "start": "2024-05-01T10:57:00",
+              "end": "2024-05-01T11:37:00",
+              "heightPercent": 7.9,
+              "color": "#9B59B6",
+              "text": "CA486",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA486",
+                "操作": "降落",
+                "延误": "3min"
+              }
+            },
+            {
+              "start": "2024-05-01T11:44:00",
+              "end": "2024-05-01T12:18:00",
+              "heightPercent": 13.2,
+              "color": "#2ECC71",
+              "text": "MU754",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU754",
+                "操作": "降落",
+                "延误": "5min"
+              }
+            },
+            {
+              "start": "2024-05-01T12:23:00",
+              "end": "2024-05-01T12:37:00",
+              "heightPercent": 2.6,
+              "color": "#E74C3C",
+              "text": "MU540",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU540",
+                "操作": "降落",
+                "延误": "1min"
+              }
+            },
+            {
+              "start": "2024-05-01T12:51:00",
+              "end": "2024-05-01T13:22:00",
+              "heightPercent": 100,
+              "color": "#E74C3C",
+              "text": "CZ496",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ496",
+                "操作": "降落",
+                "延误": "38min"
+              }
+            },
+            {
+              "start": "2024-05-01T13:29:00",
+              "end": "2024-05-01T14:01:00",
+              "heightPercent": 10.5,
+              "color": "#E74C3C",
+              "text": "3U700",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U700",
+                "操作": "起飞",
+                "延误": "4min"
+              }
+            },
+            {
+              "start": "2024-05-01T14:10:00",
+              "end": "2024-05-01T14:43:00",
+              "heightPercent": 68.4,
+              "color": "#2ECC71",
+              "text": "MU469",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU469",
+                "操作": "降落",
+                "延误": "26min"
+              }
+            },
+            {
+              "start": "2024-05-01T14:57:00",
+              "end": "2024-05-01T15:13:00",
+              "heightPercent": 26.3,
+              "color": "#9B59B6",
+              "text": "CZ712",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ712",
+                "操作": "降落",
+                "延误": "10min"
+              }
+            },
+            {
+              "start": "2024-05-01T15:23:00",
+              "end": "2024-05-01T15:30:00",
+              "heightPercent": 15.8,
+              "color": "#F39C12",
+              "text": "CZ717",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ717",
+                "操作": "起飞",
+                "延误": "6min"
+              }
+            },
+            {
+              "start": "2024-05-01T15:38:00",
+              "end": "2024-05-01T16:07:00",
+              "heightPercent": 21.1,
+              "color": "#9B59B6",
+              "text": "CZ632",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ632",
+                "操作": "降落",
+                "延误": "8min"
+              }
+            },
+            {
+              "start": "2024-05-01T16:13:00",
+              "end": "2024-05-01T16:52:00",
+              "heightPercent": 5.3,
+              "color": "#9B59B6",
+              "text": "HU595",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU595",
+                "操作": "起飞",
+                "延误": "2min"
+              }
+            },
+            {
+              "start": "2024-05-01T17:06:00",
+              "end": "2024-05-01T17:11:00",
+              "heightPercent": 21.1,
+              "color": "#E74C3C",
+              "text": "HU513",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU513",
+                "操作": "起飞",
+                "延误": "8min"
+              }
+            },
+            {
+              "start": "2024-05-01T17:25:00",
+              "end": "2024-05-01T17:44:00",
+              "heightPercent": 18.4,
+              "color": "#F39C12",
+              "text": "CZ650",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ650",
+                "操作": "降落",
+                "延误": "7min"
+              }
+            },
+            {
+              "start": "2024-05-01T17:46:00",
+              "end": "2024-05-01T18:26:00",
+              "heightPercent": 71.1,
+              "color": "#3498DB",
+              "text": "CZ835",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ835",
+                "操作": "起飞",
+                "延误": "27min"
+              }
+            },
+            {
+              "start": "2024-05-01T18:28:00",
+              "end": "2024-05-01T19:05:00",
+              "heightPercent": 5.3,
+              "color": "#F39C12",
+              "text": "MU119",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU119",
+                "操作": "降落",
+                "延误": "2min"
+              }
+            },
+            {
+              "start": "2024-05-01T19:08:00",
+              "end": "2024-05-01T19:25:00",
+              "heightPercent": 5.3,
+              "color": "#2ECC71",
+              "text": "3U850",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U850",
+                "操作": "降落",
+                "延误": "2min"
+              }
+            },
+            {
+              "start": "2024-05-01T19:37:00",
+              "end": "2024-05-01T20:07:00",
+              "heightPercent": 26.3,
+              "color": "#3498DB",
+              "text": "MU142",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU142",
+                "操作": "降落",
+                "延误": "10min"
+              }
+            },
+            {
+              "start": "2024-05-01T20:11:00",
+              "end": "2024-05-01T20:30:00",
+              "heightPercent": 0,
+              "color": "#2ECC71",
+              "text": "HU756",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU756",
+                "操作": "起飞",
+                "延误": "0min"
+              }
+            },
+            {
+              "start": "2024-05-01T20:35:00",
+              "end": "2024-05-01T20:55:00",
+              "heightPercent": 100,
+              "color": "#2ECC71",
+              "text": "CZ195",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ195",
+                "操作": "起飞",
+                "延误": "38min"
+              }
+            },
+            {
+              "start": "2024-05-01T20:58:00",
+              "end": "2024-05-01T21:19:00",
+              "heightPercent": 65.8,
+              "color": "#E74C3C",
+              "text": "HU402",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU402",
+                "操作": "降落",
+                "延误": "25min"
+              }
+            },
+            {
+              "start": "2024-05-01T21:34:00",
+              "end": "2024-05-01T21:48:00",
+              "heightPercent": 76.3,
+              "color": "#2ECC71",
+              "text": "CA868",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA868",
+                "操作": "降落",
+                "延误": "29min"
+              }
+            },
+            {
+              "start": "2024-05-01T21:59:00",
+              "end": "2024-05-01T22:18:00",
+              "heightPercent": 18.4,
+              "color": "#9B59B6",
+              "text": "CA334",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA334",
+                "操作": "降落",
+                "延误": "7min"
+              }
+            },
+            {
+              "start": "2024-05-01T22:29:00",
+              "end": "2024-05-01T22:43:00",
+              "heightPercent": 39.5,
+              "color": "#E74C3C",
+              "text": "HU870",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU870",
+                "操作": "降落",
+                "延误": "15min"
+              }
+            },
+            {
+              "start": "2024-05-01T22:48:00",
+              "end": "2024-05-01T22:56:00",
+              "heightPercent": 15.8,
+              "color": "#2ECC71",
+              "text": "HU246",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU246",
+                "操作": "降落",
+                "延误": "6min"
+              }
+            }
+          ],
+          "events": [
+            {
+              "time": "2024-05-01T02:43:00",
+              "text": "延误28min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T08:54:00",
+              "text": "延误29min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T13:06:00",
+              "text": "延误38min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T14:26:00",
+              "text": "延误26min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T18:06:00",
+              "text": "延误27min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T20:45:00",
+              "text": "延误38min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T21:08:00",
+              "text": "延误25min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T21:41:00",
+              "text": "延误29min",
+              "color": "#FF0000",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "title": "R2 南跑道",
+          "description": "航班起降",
+          "footer": "",
+          "blocks": [
+            {
+              "start": "2024-05-01T00:00:00",
+              "end": "2024-05-01T00:09:00",
+              "heightPercent": 18.4,
+              "color": "#3498DB",
+              "text": "3U227",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U227",
+                "操作": "起飞",
+                "延误": "7min"
+              }
+            },
+            {
+              "start": "2024-05-01T00:19:00",
+              "end": "2024-05-01T00:31:00",
+              "heightPercent": 2.6,
+              "color": "#3498DB",
+              "text": "CA386",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA386",
+                "操作": "降落",
+                "延误": "1min"
+              }
+            },
+            {
+              "start": "2024-05-01T00:38:00",
+              "end": "2024-05-01T01:08:00",
+              "heightPercent": 21.1,
+              "color": "#3498DB",
+              "text": "CZ709",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ709",
+                "操作": "起飞",
+                "延误": "8min"
+              }
+            },
+            {
+              "start": "2024-05-01T01:20:00",
+              "end": "2024-05-01T01:36:00",
+              "heightPercent": 2.6,
+              "color": "#3498DB",
+              "text": "CZ248",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ248",
+                "操作": "降落",
+                "延误": "1min"
+              }
+            },
+            {
+              "start": "2024-05-01T01:41:00",
+              "end": "2024-05-01T01:56:00",
+              "heightPercent": 21.1,
+              "color": "#E74C3C",
+              "text": "3U632",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U632",
+                "操作": "起飞",
+                "延误": "8min"
+              }
+            },
+            {
+              "start": "2024-05-01T02:02:00",
+              "end": "2024-05-01T02:39:00",
+              "heightPercent": 21.1,
+              "color": "#3498DB",
+              "text": "CZ577",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ577",
+                "操作": "起飞",
+                "延误": "8min"
+              }
+            },
+            {
+              "start": "2024-05-01T02:43:00",
+              "end": "2024-05-01T03:23:00",
+              "heightPercent": 15.8,
+              "color": "#2ECC71",
+              "text": "MU325",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU325",
+                "操作": "起飞",
+                "延误": "6min"
+              }
+            },
+            {
+              "start": "2024-05-01T03:25:00",
+              "end": "2024-05-01T03:30:00",
+              "heightPercent": 10.5,
+              "color": "#F39C12",
+              "text": "CA365",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA365",
+                "操作": "起飞",
+                "延误": "4min"
+              }
+            },
+            {
+              "start": "2024-05-01T03:38:00",
+              "end": "2024-05-01T04:14:00",
+              "heightPercent": 23.7,
+              "color": "#3498DB",
+              "text": "3U992",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U992",
+                "操作": "降落",
+                "延误": "9min"
+              }
+            },
+            {
+              "start": "2024-05-01T04:25:00",
+              "end": "2024-05-01T04:50:00",
+              "heightPercent": 94.7,
+              "color": "#9B59B6",
+              "text": "3U440",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U440",
+                "操作": "降落",
+                "延误": "36min"
+              }
+            },
+            {
+              "start": "2024-05-01T05:02:00",
+              "end": "2024-05-01T05:25:00",
+              "heightPercent": 94.7,
+              "color": "#2ECC71",
+              "text": "MU890",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU890",
+                "操作": "起飞",
+                "延误": "36min"
+              }
+            },
+            {
+              "start": "2024-05-01T05:33:00",
+              "end": "2024-05-01T06:07:00",
+              "heightPercent": 60.5,
+              "color": "#3498DB",
+              "text": "MU674",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU674",
+                "操作": "起飞",
+                "延误": "23min"
+              }
+            },
+            {
+              "start": "2024-05-01T06:19:00",
+              "end": "2024-05-01T06:26:00",
+              "heightPercent": 78.9,
+              "color": "#E74C3C",
+              "text": "HU744",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU744",
+                "操作": "降落",
+                "延误": "30min"
+              }
+            },
+            {
+              "start": "2024-05-01T06:37:00",
+              "end": "2024-05-01T06:47:00",
+              "heightPercent": 2.6,
+              "color": "#E74C3C",
+              "text": "HU336",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU336",
+                "操作": "降落",
+                "延误": "1min"
+              }
+            },
+            {
+              "start": "2024-05-01T07:00:00",
+              "end": "2024-05-01T07:31:00",
+              "heightPercent": 7.9,
+              "color": "#9B59B6",
+              "text": "3U650",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U650",
+                "操作": "起飞",
+                "延误": "3min"
+              }
+            },
+            {
+              "start": "2024-05-01T07:41:00",
+              "end": "2024-05-01T08:04:00",
+              "heightPercent": 13.2,
+              "color": "#E74C3C",
+              "text": "CA558",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA558",
+                "操作": "降落",
+                "延误": "5min"
+              }
+            },
+            {
+              "start": "2024-05-01T08:18:00",
+              "end": "2024-05-01T08:51:00",
+              "heightPercent": 10.5,
+              "color": "#E74C3C",
+              "text": "CA199",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA199",
+                "操作": "起飞",
+                "延误": "4min"
+              }
+            },
+            {
+              "start": "2024-05-01T08:58:00",
+              "end": "2024-05-01T09:05:00",
+              "heightPercent": 21.1,
+              "color": "#E74C3C",
+              "text": "HU158",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU158",
+                "操作": "降落",
+                "延误": "8min"
+              }
+            },
+            {
+              "start": "2024-05-01T09:12:00",
+              "end": "2024-05-01T09:33:00",
+              "heightPercent": 2.6,
+              "color": "#F39C12",
+              "text": "CA524",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA524",
+                "操作": "起飞",
+                "延误": "1min"
+              }
+            },
+            {
+              "start": "2024-05-01T09:38:00",
+              "end": "2024-05-01T10:04:00",
+              "heightPercent": 23.7,
+              "color": "#E74C3C",
+              "text": "MU310",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU310",
+                "操作": "降落",
+                "延误": "9min"
+              }
+            },
+            {
+              "start": "2024-05-01T10:12:00",
+              "end": "2024-05-01T10:24:00",
+              "heightPercent": 0,
+              "color": "#E74C3C",
+              "text": "HU334",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU334",
+                "操作": "降落",
+                "延误": "0min"
+              }
+            },
+            {
+              "start": "2024-05-01T10:37:00",
+              "end": "2024-05-01T10:53:00",
+              "heightPercent": 63.2,
+              "color": "#9B59B6",
+              "text": "CZ140",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ140",
+                "操作": "起飞",
+                "延误": "24min"
+              }
+            },
+            {
+              "start": "2024-05-01T11:06:00",
+              "end": "2024-05-01T11:35:00",
+              "heightPercent": 100,
+              "color": "#3498DB",
+              "text": "HU296",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU296",
+                "操作": "降落",
+                "延误": "38min"
+              }
+            },
+            {
+              "start": "2024-05-01T11:39:00",
+              "end": "2024-05-01T11:54:00",
+              "heightPercent": 26.3,
+              "color": "#3498DB",
+              "text": "CA524",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA524",
+                "操作": "降落",
+                "延误": "10min"
+              }
+            },
+            {
+              "start": "2024-05-01T12:06:00",
+              "end": "2024-05-01T12:23:00",
+              "heightPercent": 44.7,
+              "color": "#F39C12",
+              "text": "CA162",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA162",
+                "操作": "起飞",
+                "延误": "17min"
+              }
+            },
+            {
+              "start": "2024-05-01T12:26:00",
+              "end": "2024-05-01T12:31:00",
+              "heightPercent": 2.6,
+              "color": "#F39C12",
+              "text": "CA643",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA643",
+                "操作": "起飞",
+                "延误": "1min"
+              }
+            },
+            {
+              "start": "2024-05-01T12:45:00",
+              "end": "2024-05-01T13:00:00",
+              "heightPercent": 15.8,
+              "color": "#3498DB",
+              "text": "HU201",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU201",
+                "操作": "起飞",
+                "延误": "6min"
+              }
+            },
+            {
+              "start": "2024-05-01T13:11:00",
+              "end": "2024-05-01T13:19:00",
+              "heightPercent": 57.9,
+              "color": "#9B59B6",
+              "text": "HU699",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU699",
+                "操作": "起飞",
+                "延误": "22min"
+              }
+            },
+            {
+              "start": "2024-05-01T13:26:00",
+              "end": "2024-05-01T13:55:00",
+              "heightPercent": 2.6,
+              "color": "#2ECC71",
+              "text": "CZ925",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ925",
+                "操作": "起飞",
+                "延误": "1min"
+              }
+            },
+            {
+              "start": "2024-05-01T13:58:00",
+              "end": "2024-05-01T14:16:00",
+              "heightPercent": 52.6,
+              "color": "#2ECC71",
+              "text": "MU293",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU293",
+                "操作": "降落",
+                "延误": "20min"
+              }
+            },
+            {
+              "start": "2024-05-01T14:20:00",
+              "end": "2024-05-01T14:53:00",
+              "heightPercent": 23.7,
+              "color": "#F39C12",
+              "text": "3U918",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U918",
+                "操作": "降落",
+                "延误": "9min"
+              }
+            },
+            {
+              "start": "2024-05-01T15:04:00",
+              "end": "2024-05-01T15:14:00",
+              "heightPercent": 7.9,
+              "color": "#F39C12",
+              "text": "MU862",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU862",
+                "操作": "起飞",
+                "延误": "3min"
+              }
+            },
+            {
+              "start": "2024-05-01T15:26:00",
+              "end": "2024-05-01T15:51:00",
+              "heightPercent": 52.6,
+              "color": "#3498DB",
+              "text": "CA598",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA598",
+                "操作": "降落",
+                "延误": "20min"
+              }
+            },
+            {
+              "start": "2024-05-01T16:04:00",
+              "end": "2024-05-01T16:25:00",
+              "heightPercent": 23.7,
+              "color": "#F39C12",
+              "text": "HU847",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU847",
+                "操作": "起飞",
+                "延误": "9min"
+              }
+            },
+            {
+              "start": "2024-05-01T16:34:00",
+              "end": "2024-05-01T17:07:00",
+              "heightPercent": 81.6,
+              "color": "#3498DB",
+              "text": "CA418",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA418",
+                "操作": "降落",
+                "延误": "31min"
+              }
+            },
+            {
+              "start": "2024-05-01T17:12:00",
+              "end": "2024-05-01T17:18:00",
+              "heightPercent": 5.3,
+              "color": "#E74C3C",
+              "text": "CZ720",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ720",
+                "操作": "起飞",
+                "延误": "2min"
+              }
+            },
+            {
+              "start": "2024-05-01T17:28:00",
+              "end": "2024-05-01T17:33:00",
+              "heightPercent": 26.3,
+              "color": "#E74C3C",
+              "text": "3U736",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U736",
+                "操作": "起飞",
+                "延误": "10min"
+              }
+            },
+            {
+              "start": "2024-05-01T17:43:00",
+              "end": "2024-05-01T18:22:00",
+              "heightPercent": 18.4,
+              "color": "#3498DB",
+              "text": "CZ848",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ848",
+                "操作": "降落",
+                "延误": "7min"
+              }
+            },
+            {
+              "start": "2024-05-01T18:35:00",
+              "end": "2024-05-01T19:12:00",
+              "heightPercent": 21.1,
+              "color": "#9B59B6",
+              "text": "CA651",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA651",
+                "操作": "降落",
+                "延误": "8min"
+              }
+            },
+            {
+              "start": "2024-05-01T19:26:00",
+              "end": "2024-05-01T20:03:00",
+              "heightPercent": 52.6,
+              "color": "#2ECC71",
+              "text": "HU462",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU462",
+                "操作": "起飞",
+                "延误": "20min"
+              }
+            },
+            {
+              "start": "2024-05-01T20:16:00",
+              "end": "2024-05-01T20:21:00",
+              "heightPercent": 0,
+              "color": "#E74C3C",
+              "text": "CA571",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA571",
+                "操作": "起飞",
+                "延误": "0min"
+              }
+            },
+            {
+              "start": "2024-05-01T20:27:00",
+              "end": "2024-05-01T20:40:00",
+              "heightPercent": 5.3,
+              "color": "#F39C12",
+              "text": "HU491",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU491",
+                "操作": "起飞",
+                "延误": "2min"
+              }
+            },
+            {
+              "start": "2024-05-01T20:54:00",
+              "end": "2024-05-01T21:27:00",
+              "heightPercent": 5.3,
+              "color": "#3498DB",
+              "text": "MU706",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU706",
+                "操作": "起飞",
+                "延误": "2min"
+              }
+            },
+            {
+              "start": "2024-05-01T21:39:00",
+              "end": "2024-05-01T22:06:00",
+              "heightPercent": 44.7,
+              "color": "#3498DB",
+              "text": "CA762",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA762",
+                "操作": "起飞",
+                "延误": "17min"
+              }
+            },
+            {
+              "start": "2024-05-01T22:08:00",
+              "end": "2024-05-01T22:33:00",
+              "heightPercent": 5.3,
+              "color": "#E74C3C",
+              "text": "MU661",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU661",
+                "操作": "降落",
+                "延误": "2min"
+              }
+            },
+            {
+              "start": "2024-05-01T22:47:00",
+              "end": "2024-05-01T22:56:00",
+              "heightPercent": 100,
+              "color": "#E74C3C",
+              "text": "CZ544",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ544",
+                "操作": "降落",
+                "延误": "38min"
+              }
+            }
+          ],
+          "events": [
+            {
+              "time": "2024-05-01T04:37:00",
+              "text": "延误36min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T05:13:00",
+              "text": "延误36min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T05:50:00",
+              "text": "延误23min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T06:22:00",
+              "text": "延误30min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T10:45:00",
+              "text": "延误24min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T11:20:00",
+              "text": "延误38min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T13:15:00",
+              "text": "延误22min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T16:50:00",
+              "text": "延误31min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T22:51:00",
+              "text": "延误38min",
+              "color": "#FF0000",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "title": "R3 东跑道",
+          "description": "航班起降",
+          "footer": "",
+          "blocks": [
+            {
+              "start": "2024-05-01T00:00:00",
+              "end": "2024-05-01T00:17:00",
+              "heightPercent": 2.6,
+              "color": "#E74C3C",
+              "text": "CZ589",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ589",
+                "操作": "起飞",
+                "延误": "1min"
+              }
+            },
+            {
+              "start": "2024-05-01T00:22:00",
+              "end": "2024-05-01T00:29:00",
+              "heightPercent": 25.6,
+              "color": "#2ECC71",
+              "text": "CZ865",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ865",
+                "操作": "起飞",
+                "延误": "10min"
+              }
+            },
+            {
+              "start": "2024-05-01T00:38:00",
+              "end": "2024-05-01T00:51:00",
+              "heightPercent": 15.4,
+              "color": "#E74C3C",
+              "text": "HU955",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU955",
+                "操作": "降落",
+                "延误": "6min"
+              }
+            },
+            {
+              "start": "2024-05-01T01:04:00",
+              "end": "2024-05-01T01:20:00",
+              "heightPercent": 100,
+              "color": "#3498DB",
+              "text": "HU308",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU308",
+                "操作": "降落",
+                "延误": "39min"
+              }
+            },
+            {
+              "start": "2024-05-01T01:27:00",
+              "end": "2024-05-01T01:38:00",
+              "heightPercent": 10.3,
+              "color": "#F39C12",
+              "text": "HU158",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU158",
+                "操作": "降落",
+                "延误": "4min"
+              }
+            },
+            {
+              "start": "2024-05-01T01:46:00",
+              "end": "2024-05-01T02:12:00",
+              "heightPercent": 25.6,
+              "color": "#F39C12",
+              "text": "CZ766",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ766",
+                "操作": "降落",
+                "延误": "10min"
+              }
+            },
+            {
+              "start": "2024-05-01T02:14:00",
+              "end": "2024-05-01T02:32:00",
+              "heightPercent": 64.1,
+              "color": "#9B59B6",
+              "text": "HU866",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU866",
+                "操作": "降落",
+                "延误": "25min"
+              }
+            },
+            {
+              "start": "2024-05-01T02:38:00",
+              "end": "2024-05-01T03:14:00",
+              "heightPercent": 15.4,
+              "color": "#3498DB",
+              "text": "3U736",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U736",
+                "操作": "降落",
+                "延误": "6min"
+              }
+            },
+            {
+              "start": "2024-05-01T03:18:00",
+              "end": "2024-05-01T03:37:00",
+              "heightPercent": 12.8,
+              "color": "#9B59B6",
+              "text": "CA679",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA679",
+                "操作": "降落",
+                "延误": "5min"
+              }
+            },
+            {
+              "start": "2024-05-01T03:41:00",
+              "end": "2024-05-01T04:00:00",
+              "heightPercent": 23.1,
+              "color": "#F39C12",
+              "text": "CZ195",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ195",
+                "操作": "起飞",
+                "延误": "9min"
+              }
+            },
+            {
+              "start": "2024-05-01T04:07:00",
+              "end": "2024-05-01T04:38:00",
+              "heightPercent": 100,
+              "color": "#9B59B6",
+              "text": "HU669",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU669",
+                "操作": "起飞",
+                "延误": "39min"
+              }
+            },
+            {
+              "start": "2024-05-01T04:45:00",
+              "end": "2024-05-01T04:59:00",
+              "heightPercent": 5.1,
+              "color": "#2ECC71",
+              "text": "CZ244",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ244",
+                "操作": "起飞",
+                "延误": "2min"
+              }
+            },
+            {
+              "start": "2024-05-01T05:07:00",
+              "end": "2024-05-01T05:34:00",
+              "heightPercent": 10.3,
+              "color": "#E74C3C",
+              "text": "3U364",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U364",
+                "操作": "降落",
+                "延误": "4min"
+              }
+            },
+            {
+              "start": "2024-05-01T05:42:00",
+              "end": "2024-05-01T06:08:00",
+              "heightPercent": 23.1,
+              "color": "#E74C3C",
+              "text": "HU777",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU777",
+                "操作": "起飞",
+                "延误": "9min"
+              }
+            },
+            {
+              "start": "2024-05-01T06:11:00",
+              "end": "2024-05-01T06:40:00",
+              "heightPercent": 64.1,
+              "color": "#9B59B6",
+              "text": "CA674",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA674",
+                "操作": "降落",
+                "延误": "25min"
+              }
+            },
+            {
+              "start": "2024-05-01T06:47:00",
+              "end": "2024-05-01T07:18:00",
+              "heightPercent": 79.5,
+              "color": "#F39C12",
+              "text": "MU675",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU675",
+                "操作": "起飞",
+                "延误": "31min"
+              }
+            },
+            {
+              "start": "2024-05-01T07:27:00",
+              "end": "2024-05-01T07:56:00",
+              "heightPercent": 25.6,
+              "color": "#F39C12",
+              "text": "HU767",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU767",
+                "操作": "起飞",
+                "延误": "10min"
+              }
+            },
+            {
+              "start": "2024-05-01T08:11:00",
+              "end": "2024-05-01T08:46:00",
+              "heightPercent": 74.4,
+              "color": "#2ECC71",
+              "text": "HU899",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU899",
+                "操作": "起飞",
+                "延误": "29min"
+              }
+            },
+            {
+              "start": "2024-05-01T08:49:00",
+              "end": "2024-05-01T09:11:00",
+              "heightPercent": 15.4,
+              "color": "#2ECC71",
+              "text": "MU119",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU119",
+                "操作": "降落",
+                "延误": "6min"
+              }
+            },
+            {
+              "start": "2024-05-01T09:14:00",
+              "end": "2024-05-01T09:40:00",
+              "heightPercent": 28.2,
+              "color": "#F39C12",
+              "text": "MU865",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU865",
+                "操作": "起飞",
+                "延误": "11min"
+              }
+            },
+            {
+              "start": "2024-05-01T09:49:00",
+              "end": "2024-05-01T10:09:00",
+              "heightPercent": 59,
+              "color": "#9B59B6",
+              "text": "MU908",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU908",
+                "操作": "降落",
+                "延误": "23min"
+              }
+            },
+            {
+              "start": "2024-05-01T10:16:00",
+              "end": "2024-05-01T10:40:00",
+              "heightPercent": 5.1,
+              "color": "#F39C12",
+              "text": "CA692",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA692",
+                "操作": "起飞",
+                "延误": "2min"
+              }
+            },
+            {
+              "start": "2024-05-01T10:49:00",
+              "end": "2024-05-01T11:01:00",
+              "heightPercent": 5.1,
+              "color": "#3498DB",
+              "text": "CA163",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA163",
+                "操作": "起飞",
+                "延误": "2min"
+              }
+            },
+            {
+              "start": "2024-05-01T11:05:00",
+              "end": "2024-05-01T11:22:00",
+              "heightPercent": 0,
+              "color": "#2ECC71",
+              "text": "CZ867",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ867",
+                "操作": "起飞",
+                "延误": "0min"
+              }
+            },
+            {
+              "start": "2024-05-01T11:30:00",
+              "end": "2024-05-01T12:03:00",
+              "heightPercent": 0,
+              "color": "#F39C12",
+              "text": "3U830",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U830",
+                "操作": "起飞",
+                "延误": "0min"
+              }
+            },
+            {
+              "start": "2024-05-01T12:18:00",
+              "end": "2024-05-01T12:27:00",
+              "heightPercent": 76.9,
+              "color": "#F39C12",
+              "text": "MU896",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU896",
+                "操作": "降落",
+                "延误": "30min"
+              }
+            },
+            {
+              "start": "2024-05-01T12:30:00",
+              "end": "2024-05-01T12:37:00",
+              "heightPercent": 94.9,
+              "color": "#3498DB",
+              "text": "MU226",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU226",
+                "操作": "起飞",
+                "延误": "37min"
+              }
+            },
+            {
+              "start": "2024-05-01T12:47:00",
+              "end": "2024-05-01T13:15:00",
+              "heightPercent": 17.9,
+              "color": "#2ECC71",
+              "text": "MU908",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU908",
+                "操作": "起飞",
+                "延误": "7min"
+              }
+            },
+            {
+              "start": "2024-05-01T13:22:00",
+              "end": "2024-05-01T13:43:00",
+              "heightPercent": 12.8,
+              "color": "#3498DB",
+              "text": "CZ555",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ555",
+                "操作": "降落",
+                "延误": "5min"
+              }
+            },
+            {
+              "start": "2024-05-01T13:54:00",
+              "end": "2024-05-01T14:26:00",
+              "heightPercent": 10.3,
+              "color": "#3498DB",
+              "text": "CZ259",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ259",
+                "操作": "降落",
+                "延误": "4min"
+              }
+            },
+            {
+              "start": "2024-05-01T14:34:00",
+              "end": "2024-05-01T14:55:00",
+              "heightPercent": 2.6,
+              "color": "#3498DB",
+              "text": "3U193",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U193",
+                "操作": "起飞",
+                "延误": "1min"
+              }
+            },
+            {
+              "start": "2024-05-01T14:58:00",
+              "end": "2024-05-01T15:35:00",
+              "heightPercent": 46.2,
+              "color": "#3498DB",
+              "text": "3U401",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U401",
+                "操作": "起飞",
+                "延误": "18min"
+              }
+            },
+            {
+              "start": "2024-05-01T15:49:00",
+              "end": "2024-05-01T16:13:00",
+              "heightPercent": 10.3,
+              "color": "#E74C3C",
+              "text": "3U499",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U499",
+                "操作": "起飞",
+                "延误": "4min"
+              }
+            },
+            {
+              "start": "2024-05-01T16:16:00",
+              "end": "2024-05-01T16:46:00",
+              "heightPercent": 12.8,
+              "color": "#3498DB",
+              "text": "CZ294",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ294",
+                "操作": "降落",
+                "延误": "5min"
+              }
+            },
+            {
+              "start": "2024-05-01T16:50:00",
+              "end": "2024-05-01T17:15:00",
+              "heightPercent": 89.7,
+              "color": "#9B59B6",
+              "text": "CA269",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA269",
+                "操作": "起飞",
+                "延误": "35min"
+              }
+            },
+            {
+              "start": "2024-05-01T17:20:00",
+              "end": "2024-05-01T17:33:00",
+              "heightPercent": 7.7,
+              "color": "#9B59B6",
+              "text": "CA420",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA420",
+                "操作": "起飞",
+                "延误": "3min"
+              }
+            },
+            {
+              "start": "2024-05-01T17:44:00",
+              "end": "2024-05-01T18:23:00",
+              "heightPercent": 15.4,
+              "color": "#F39C12",
+              "text": "MU350",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU350",
+                "操作": "起飞",
+                "延误": "6min"
+              }
+            },
+            {
+              "start": "2024-05-01T18:35:00",
+              "end": "2024-05-01T18:53:00",
+              "heightPercent": 2.6,
+              "color": "#3498DB",
+              "text": "CA129",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA129",
+                "操作": "起飞",
+                "延误": "1min"
+              }
+            },
+            {
+              "start": "2024-05-01T19:07:00",
+              "end": "2024-05-01T19:36:00",
+              "heightPercent": 59,
+              "color": "#2ECC71",
+              "text": "CA919",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA919",
+                "操作": "起飞",
+                "延误": "23min"
+              }
+            },
+            {
+              "start": "2024-05-01T19:38:00",
+              "end": "2024-05-01T19:58:00",
+              "heightPercent": 25.6,
+              "color": "#F39C12",
+              "text": "CZ510",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ510",
+                "操作": "降落",
+                "延误": "10min"
+              }
+            },
+            {
+              "start": "2024-05-01T20:04:00",
+              "end": "2024-05-01T20:15:00",
+              "heightPercent": 79.5,
+              "color": "#9B59B6",
+              "text": "MU462",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU462",
+                "操作": "起飞",
+                "延误": "31min"
+              }
+            },
+            {
+              "start": "2024-05-01T20:21:00",
+              "end": "2024-05-01T20:29:00",
+              "heightPercent": 15.4,
+              "color": "#F39C12",
+              "text": "CZ702",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ702",
+                "操作": "起飞",
+                "延误": "6min"
+              }
+            },
+            {
+              "start": "2024-05-01T20:32:00",
+              "end": "2024-05-01T20:47:00",
+              "heightPercent": 17.9,
+              "color": "#2ECC71",
+              "text": "3U826",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U826",
+                "操作": "降落",
+                "延误": "7min"
+              }
+            },
+            {
+              "start": "2024-05-01T20:53:00",
+              "end": "2024-05-01T21:23:00",
+              "heightPercent": 17.9,
+              "color": "#E74C3C",
+              "text": "CZ243",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ243",
+                "操作": "降落",
+                "延误": "7min"
+              }
+            },
+            {
+              "start": "2024-05-01T21:26:00",
+              "end": "2024-05-01T21:41:00",
+              "heightPercent": 64.1,
+              "color": "#E74C3C",
+              "text": "CA149",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA149",
+                "操作": "起飞",
+                "延误": "25min"
+              }
+            },
+            {
+              "start": "2024-05-01T21:52:00",
+              "end": "2024-05-01T22:16:00",
+              "heightPercent": 25.6,
+              "color": "#9B59B6",
+              "text": "CA602",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA602",
+                "操作": "起飞",
+                "延误": "10min"
+              }
+            },
+            {
+              "start": "2024-05-01T22:27:00",
+              "end": "2024-05-01T22:39:00",
+              "heightPercent": 25.6,
+              "color": "#E74C3C",
+              "text": "3U993",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U993",
+                "操作": "降落",
+                "延误": "10min"
+              }
+            },
+            {
+              "start": "2024-05-01T22:42:00",
+              "end": "2024-05-01T22:56:00",
+              "heightPercent": 0,
+              "color": "#9B59B6",
+              "text": "3U546",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U546",
+                "操作": "降落",
+                "延误": "0min"
+              }
+            }
+          ],
+          "events": [
+            {
+              "time": "2024-05-01T01:12:00",
+              "text": "延误39min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T02:23:00",
+              "text": "延误25min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T04:22:00",
+              "text": "延误39min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T06:25:00",
+              "text": "延误25min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T07:02:00",
+              "text": "延误31min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T08:28:00",
+              "text": "延误29min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T09:59:00",
+              "text": "延误23min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T12:22:00",
+              "text": "延误30min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T12:33:00",
+              "text": "延误37min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T17:02:00",
+              "text": "延误35min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T19:21:00",
+              "text": "延误23min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T20:09:00",
+              "text": "延误31min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T21:33:00",
+              "text": "延误25min",
+              "color": "#FF0000",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "title": "R4 西跑道",
+          "description": "航班起降",
+          "footer": "",
+          "blocks": [
+            {
+              "start": "2024-05-01T00:00:00",
+              "end": "2024-05-01T00:37:00",
+              "heightPercent": 17.9,
+              "color": "#9B59B6",
+              "text": "HU442",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU442",
+                "操作": "起飞",
+                "延误": "7min"
+              }
+            },
+            {
+              "start": "2024-05-01T00:47:00",
+              "end": "2024-05-01T01:09:00",
+              "heightPercent": 0,
+              "color": "#E74C3C",
+              "text": "CA818",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA818",
+                "操作": "降落",
+                "延误": "0min"
+              }
+            },
+            {
+              "start": "2024-05-01T01:12:00",
+              "end": "2024-05-01T01:42:00",
+              "heightPercent": 17.9,
+              "color": "#3498DB",
+              "text": "CA221",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA221",
+                "操作": "降落",
+                "延误": "7min"
+              }
+            },
+            {
+              "start": "2024-05-01T01:46:00",
+              "end": "2024-05-01T02:05:00",
+              "heightPercent": 2.6,
+              "color": "#3498DB",
+              "text": "MU850",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU850",
+                "操作": "起飞",
+                "延误": "1min"
+              }
+            },
+            {
+              "start": "2024-05-01T02:13:00",
+              "end": "2024-05-01T02:26:00",
+              "heightPercent": 7.7,
+              "color": "#9B59B6",
+              "text": "CA539",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA539",
+                "操作": "起飞",
+                "延误": "3min"
+              }
+            },
+            {
+              "start": "2024-05-01T02:36:00",
+              "end": "2024-05-01T02:48:00",
+              "heightPercent": 17.9,
+              "color": "#E74C3C",
+              "text": "HU326",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU326",
+                "操作": "起飞",
+                "延误": "7min"
+              }
+            },
+            {
+              "start": "2024-05-01T02:59:00",
+              "end": "2024-05-01T03:15:00",
+              "heightPercent": 25.6,
+              "color": "#F39C12",
+              "text": "CZ196",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ196",
+                "操作": "降落",
+                "延误": "10min"
+              }
+            },
+            {
+              "start": "2024-05-01T03:19:00",
+              "end": "2024-05-01T03:44:00",
+              "heightPercent": 71.8,
+              "color": "#3498DB",
+              "text": "3U676",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U676",
+                "操作": "起飞",
+                "延误": "28min"
+              }
+            },
+            {
+              "start": "2024-05-01T03:47:00",
+              "end": "2024-05-01T03:53:00",
+              "heightPercent": 25.6,
+              "color": "#F39C12",
+              "text": "MU718",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU718",
+                "操作": "降落",
+                "延误": "10min"
+              }
+            },
+            {
+              "start": "2024-05-01T04:07:00",
+              "end": "2024-05-01T04:31:00",
+              "heightPercent": 2.6,
+              "color": "#3498DB",
+              "text": "MU698",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU698",
+                "操作": "起飞",
+                "延误": "1min"
+              }
+            },
+            {
+              "start": "2024-05-01T04:34:00",
+              "end": "2024-05-01T05:12:00",
+              "heightPercent": 94.9,
+              "color": "#2ECC71",
+              "text": "HU745",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU745",
+                "操作": "起飞",
+                "延误": "37min"
+              }
+            },
+            {
+              "start": "2024-05-01T05:16:00",
+              "end": "2024-05-01T05:42:00",
+              "heightPercent": 10.3,
+              "color": "#F39C12",
+              "text": "CA160",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA160",
+                "操作": "降落",
+                "延误": "4min"
+              }
+            },
+            {
+              "start": "2024-05-01T05:55:00",
+              "end": "2024-05-01T06:22:00",
+              "heightPercent": 82.1,
+              "color": "#2ECC71",
+              "text": "CZ225",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ225",
+                "操作": "降落",
+                "延误": "32min"
+              }
+            },
+            {
+              "start": "2024-05-01T06:24:00",
+              "end": "2024-05-01T06:56:00",
+              "heightPercent": 7.7,
+              "color": "#2ECC71",
+              "text": "HU831",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU831",
+                "操作": "降落",
+                "延误": "3min"
+              }
+            },
+            {
+              "start": "2024-05-01T07:05:00",
+              "end": "2024-05-01T07:37:00",
+              "heightPercent": 0,
+              "color": "#3498DB",
+              "text": "MU877",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU877",
+                "操作": "起飞",
+                "延误": "0min"
+              }
+            },
+            {
+              "start": "2024-05-01T07:43:00",
+              "end": "2024-05-01T07:53:00",
+              "heightPercent": 48.7,
+              "color": "#2ECC71",
+              "text": "3U654",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U654",
+                "操作": "起飞",
+                "延误": "19min"
+              }
+            },
+            {
+              "start": "2024-05-01T08:01:00",
+              "end": "2024-05-01T08:28:00",
+              "heightPercent": 23.1,
+              "color": "#E74C3C",
+              "text": "CA436",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA436",
+                "操作": "起飞",
+                "延误": "9min"
+              }
+            },
+            {
+              "start": "2024-05-01T08:40:00",
+              "end": "2024-05-01T09:16:00",
+              "heightPercent": 33.3,
+              "color": "#F39C12",
+              "text": "CA973",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA973",
+                "操作": "降落",
+                "延误": "13min"
+              }
+            },
+            {
+              "start": "2024-05-01T09:23:00",
+              "end": "2024-05-01T09:41:00",
+              "heightPercent": 87.2,
+              "color": "#2ECC71",
+              "text": "CA296",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA296",
+                "操作": "起飞",
+                "延误": "34min"
+              }
+            },
+            {
+              "start": "2024-05-01T09:46:00",
+              "end": "2024-05-01T10:20:00",
+              "heightPercent": 0,
+              "color": "#2ECC71",
+              "text": "CA754",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA754",
+                "操作": "起飞",
+                "延误": "0min"
+              }
+            },
+            {
+              "start": "2024-05-01T10:24:00",
+              "end": "2024-05-01T10:35:00",
+              "heightPercent": 0,
+              "color": "#F39C12",
+              "text": "CZ118",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ118",
+                "操作": "起飞",
+                "延误": "0min"
+              }
+            },
+            {
+              "start": "2024-05-01T10:38:00",
+              "end": "2024-05-01T10:45:00",
+              "heightPercent": 17.9,
+              "color": "#F39C12",
+              "text": "HU521",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU521",
+                "操作": "降落",
+                "延误": "7min"
+              }
+            },
+            {
+              "start": "2024-05-01T10:47:00",
+              "end": "2024-05-01T11:11:00",
+              "heightPercent": 12.8,
+              "color": "#2ECC71",
+              "text": "3U489",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U489",
+                "操作": "降落",
+                "延误": "5min"
+              }
+            },
+            {
+              "start": "2024-05-01T11:19:00",
+              "end": "2024-05-01T11:56:00",
+              "heightPercent": 48.7,
+              "color": "#F39C12",
+              "text": "3U447",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U447",
+                "操作": "降落",
+                "延误": "19min"
+              }
+            },
+            {
+              "start": "2024-05-01T12:08:00",
+              "end": "2024-05-01T12:25:00",
+              "heightPercent": 23.1,
+              "color": "#F39C12",
+              "text": "HU698",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU698",
+                "操作": "降落",
+                "延误": "9min"
+              }
+            },
+            {
+              "start": "2024-05-01T12:32:00",
+              "end": "2024-05-01T13:12:00",
+              "heightPercent": 46.2,
+              "color": "#9B59B6",
+              "text": "3U858",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U858",
+                "操作": "起飞",
+                "延误": "18min"
+              }
+            },
+            {
+              "start": "2024-05-01T13:16:00",
+              "end": "2024-05-01T13:31:00",
+              "heightPercent": 5.1,
+              "color": "#2ECC71",
+              "text": "CZ263",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ263",
+                "操作": "降落",
+                "延误": "2min"
+              }
+            },
+            {
+              "start": "2024-05-01T13:37:00",
+              "end": "2024-05-01T13:52:00",
+              "heightPercent": 10.3,
+              "color": "#3498DB",
+              "text": "CA807",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA807",
+                "操作": "起飞",
+                "延误": "4min"
+              }
+            },
+            {
+              "start": "2024-05-01T13:56:00",
+              "end": "2024-05-01T14:24:00",
+              "heightPercent": 17.9,
+              "color": "#2ECC71",
+              "text": "MU682",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU682",
+                "操作": "起飞",
+                "延误": "7min"
+              }
+            },
+            {
+              "start": "2024-05-01T14:39:00",
+              "end": "2024-05-01T14:45:00",
+              "heightPercent": 25.6,
+              "color": "#2ECC71",
+              "text": "3U780",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U780",
+                "操作": "起飞",
+                "延误": "10min"
+              }
+            },
+            {
+              "start": "2024-05-01T14:50:00",
+              "end": "2024-05-01T15:29:00",
+              "heightPercent": 10.3,
+              "color": "#9B59B6",
+              "text": "HU214",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU214",
+                "操作": "起飞",
+                "延误": "4min"
+              }
+            },
+            {
+              "start": "2024-05-01T15:39:00",
+              "end": "2024-05-01T16:04:00",
+              "heightPercent": 5.1,
+              "color": "#2ECC71",
+              "text": "CA522",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA522",
+                "操作": "降落",
+                "延误": "2min"
+              }
+            },
+            {
+              "start": "2024-05-01T16:19:00",
+              "end": "2024-05-01T16:32:00",
+              "heightPercent": 94.9,
+              "color": "#9B59B6",
+              "text": "CZ484",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CZ484",
+                "操作": "起飞",
+                "延误": "37min"
+              }
+            },
+            {
+              "start": "2024-05-01T16:47:00",
+              "end": "2024-05-01T16:53:00",
+              "heightPercent": 15.4,
+              "color": "#F39C12",
+              "text": "CA129",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA129",
+                "操作": "降落",
+                "延误": "6min"
+              }
+            },
+            {
+              "start": "2024-05-01T17:03:00",
+              "end": "2024-05-01T17:42:00",
+              "heightPercent": 56.4,
+              "color": "#2ECC71",
+              "text": "HU284",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU284",
+                "操作": "起飞",
+                "延误": "22min"
+              }
+            },
+            {
+              "start": "2024-05-01T17:44:00",
+              "end": "2024-05-01T18:19:00",
+              "heightPercent": 89.7,
+              "color": "#E74C3C",
+              "text": "HU216",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU216",
+                "操作": "降落",
+                "延误": "35min"
+              }
+            },
+            {
+              "start": "2024-05-01T18:24:00",
+              "end": "2024-05-01T18:51:00",
+              "heightPercent": 17.9,
+              "color": "#2ECC71",
+              "text": "MU251",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU251",
+                "操作": "起飞",
+                "延误": "7min"
+              }
+            },
+            {
+              "start": "2024-05-01T18:56:00",
+              "end": "2024-05-01T19:14:00",
+              "heightPercent": 61.5,
+              "color": "#2ECC71",
+              "text": "3U238",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U238",
+                "操作": "降落",
+                "延误": "24min"
+              }
+            },
+            {
+              "start": "2024-05-01T19:27:00",
+              "end": "2024-05-01T19:50:00",
+              "heightPercent": 25.6,
+              "color": "#9B59B6",
+              "text": "HU203",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "HU203",
+                "操作": "起飞",
+                "延误": "10min"
+              }
+            },
+            {
+              "start": "2024-05-01T20:00:00",
+              "end": "2024-05-01T20:22:00",
+              "heightPercent": 0,
+              "color": "#9B59B6",
+              "text": "CA273",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "CA273",
+                "操作": "降落",
+                "延误": "0min"
+              }
+            },
+            {
+              "start": "2024-05-01T20:37:00",
+              "end": "2024-05-01T20:57:00",
+              "heightPercent": 61.5,
+              "color": "#F39C12",
+              "text": "3U927",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U927",
+                "操作": "起飞",
+                "延误": "24min"
+              }
+            },
+            {
+              "start": "2024-05-01T21:00:00",
+              "end": "2024-05-01T21:35:00",
+              "heightPercent": 17.9,
+              "color": "#2ECC71",
+              "text": "3U733",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "3U733",
+                "操作": "起飞",
+                "延误": "7min"
+              }
+            },
+            {
+              "start": "2024-05-01T21:40:00",
+              "end": "2024-05-01T21:46:00",
+              "heightPercent": 48.7,
+              "color": "#E74C3C",
+              "text": "MU567",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU567",
+                "操作": "降落",
+                "延误": "19min"
+              }
+            },
+            {
+              "start": "2024-05-01T21:48:00",
+              "end": "2024-05-01T22:21:00",
+              "heightPercent": 12.8,
+              "color": "#F39C12",
+              "text": "MU570",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU570",
+                "操作": "降落",
+                "延误": "5min"
+              }
+            },
+            {
+              "start": "2024-05-01T22:28:00",
+              "end": "2024-05-01T22:55:00",
+              "heightPercent": 20.5,
+              "color": "#9B59B6",
+              "text": "MU466",
+              "textConfig": {
+                "show": true,
+                "color": "#fff",
+                "size": 9
+              },
+              "properties": {
+                "航班": "MU466",
+                "操作": "降落",
+                "延误": "8min"
+              }
+            }
+          ],
+          "events": [
+            {
+              "time": "2024-05-01T03:31:00",
+              "text": "延误28min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T04:53:00",
+              "text": "延误37min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T06:08:00",
+              "text": "延误32min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T09:32:00",
+              "text": "延误34min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T16:25:00",
+              "text": "延误37min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T17:22:00",
+              "text": "延误22min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T18:01:00",
+              "text": "延误35min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T19:05:00",
+              "text": "延误24min",
+              "color": "#FF0000",
+              "size": 10
+            },
+            {
+              "time": "2024-05-01T20:47:00",
+              "text": "延误24min",
+              "color": "#FF0000",
+              "size": 10
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {
+    "defaultBlockColor": "#4A90D9",
+    "minBlockHeightPx": 2,
+    "minBlockWidthPx": 2,
+    "fontFamily": "'Microsoft YaHei','PingFang SC',sans-serif",
+    "blockBorderRadius": 2,
+    "blockBorderWidth": 0,
+    "blockBorderColor": "rgba(0,0,0,0.2)",
+    "theme": {
+      "backgroundColor": "#1a1a2e",
+      "labelBgColor": "#16162a",
+      "channelBgColor": "#1b1c30",
+      "channelBgAltColor": "#1d1e32",
+      "groupHeaderBgColor": "rgba(255,255,255,0.05)",
+      "groupHeaderTextColor": "#ddd",
+      "baselineColor": "rgba(255,255,255,0.12)",
+      "timeAxisColor": "#888",
+      "timeTextColor": "#aaa",
+      "timeTickColor": "rgba(255,255,255,0.15)",
+      "headerTitleColor": "#eee",
+      "headerDescColor": "#999",
+      "footerColor": "#666",
+      "gridLineColor": "rgba(255,255,255,0.04)",
+      "eventMarkerColor": "#FF6B6B",
+      "hoverBorderColor": "#fff",
+      "labelSeparatorColor": "rgba(255,255,255,0.08)"
+    },
+    "chartTitle": "机场跑道占用可视化",
+    "channelHeight": 80,
+    "timeFormat": "HH:mm",
+    "timeFontSize": 11,
+    "blockFontSize": 10,
+    "eventFontSize": 10,
+    "zoomMin": 0.01,
+    "zoomMax": 200,
+    "showEvents": true,
+    "blockTextPosition": "center",
+    "blockTextShow": true,
+    "showGridLines": true,
+    "labelWidth": 120,
+    "timeAxisHeight": 48,
+    "headerHeight": 34,
+    "footerHeight": 16,
+    "groupHeaderHeight": 28,
+    "chartTitleHeight": 30
+  }
+}
