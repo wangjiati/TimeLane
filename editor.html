@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TimeLane — 数据编辑器</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  height: 100vh;
+  background: #0f0f23;
+  color: #ccc;
+  font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+}
+#toolbar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 12px; background: #1a1a2e; border-bottom: 1px solid rgba(255,255,255,0.08);
+  flex-shrink: 0; z-index: 10; flex-wrap: wrap;
+}
+#toolbar button, #toolbar select {
+  background: #2a2a4a; color: #ccc; border: 1px solid rgba(255,255,255,0.12);
+  padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 12px;
+  font-family: inherit; white-space: nowrap;
+}
+#toolbar button:hover { background: #3a3a5a; color: #fff; }
+#toolbar button.primary { background: #4A90D9; color: #fff; border-color: #4A90D9; }
+#toolbar button.primary:hover { background: #5AA0E9; }
+#toolbar .sep { width: 1px; height: 18px; background: rgba(255,255,255,0.12); margin: 0 2px; flex-shrink: 0; }
+#toolbar .grow { flex: 1; }
+
+#preview-area {
+  flex: 1 1 45%; min-height: 160px;
+  position: relative;
+  background: #1a1a2e; border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+#canvas-scroll { overflow: auto; height: 100%; min-height: 100%; }
+#canvas-scroll canvas { display: block; }
+
+#preview-toolbar {
+  position: absolute; bottom: 6px; right: 8px;
+  display: flex; gap: 4px;
+}
+#preview-toolbar button {
+  background: rgba(26,26,46,0.85); color: #aaa; border: 1px solid rgba(255,255,255,0.1);
+  padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 11px;
+  font-family: inherit;
+}
+#preview-toolbar button:hover { background: rgba(40,40,70,0.9); color: #fff; }
+#preview-toolbar button.active { background: #4A90D9; color: #fff; border-color: #4A90D9; }
+
+#tab-bar {
+  display: flex; flex-shrink: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: #16162a;
+}
+#tab-bar button {
+  background: none; color: #888; border: none;
+  padding: 8px 24px; cursor: pointer; font-size: 13px;
+  font-family: inherit; border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+}
+#tab-bar button:hover { color: #ccc; }
+#tab-bar button.active {
+  color: #4A90D9; border-bottom-color: #4A90D9;
+}
+
+#editor-area {
+  flex: 1 1 0; min-height: 120px;
+  background: #16162a; overflow: auto;
+}
+
+#config-panel { padding: 8px; }
+#data-panel { padding: 0; height: 100%; overflow: auto; }
+
+.cfg-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.cfg-table td { padding: 3px 8px; border-bottom: 1px solid rgba(255,255,255,0.04); vertical-align: middle; }
+.cfg-table .cfg-label { color: #999; width: 160px; white-space: nowrap; }
+.cfg-table .cfg-section { color: #4A90D9; font-weight: bold; padding-top: 12px; font-size: 12px; }
+.cfg-table input[type="text"],
+.cfg-table input[type="number"] {
+  background: #1a1a2e; color: #ccc; border: 1px solid rgba(255,255,255,0.1);
+  padding: 3px 6px; border-radius: 3px; font-size: 12px; font-family: inherit;
+  width: 200px;
+}
+.cfg-table input[type="range"] {
+  width: 120px; vertical-align: middle; accent-color: #4A90D9;
+}
+.cfg-table input[type="color"] {
+  width: 32px; height: 22px; border: 1px solid rgba(255,255,255,0.12);
+  background: none; cursor: pointer; border-radius: 3px; padding: 1px;
+}
+.cfg-table input[type="checkbox"] { accent-color: #4A90D9; transform: scale(1.1); }
+.cfg-table select {
+  background: #1a1a2e; color: #ccc; border: 1px solid rgba(255,255,255,0.1);
+  padding: 3px 6px; border-radius: 3px; font-size: 12px; font-family: inherit;
+}
+.cfg-table .cfg-val-num { color: #aaa; font-size: 11px; margin-left: 4px; min-width: 28px; display: inline-block; }
+
+.theme-row { display: flex; gap: 6px; margin-top: 4px; }
+.theme-row button {
+  background: #2a2a4a; color: #999; border: 1px solid rgba(255,255,255,0.1);
+  padding: 4px 14px; border-radius: 3px; cursor: pointer; font-size: 11px; font-family: inherit;
+}
+.theme-row button:hover { background: #3a3a5a; color: #fff; }
+
+.data-table-wrap { overflow: auto; height: 100%; }
+.data-table { width: 100%; border-collapse: collapse; font-size: 12px; table-layout: fixed; }
+.data-table thead { position: sticky; top: 0; z-index: 2; }
+.data-table th {
+  background: #1e1e38; color: #999; font-weight: normal;
+  padding: 5px 4px; border-bottom: 1px solid rgba(255,255,255,0.1);
+  text-align: left; white-space: nowrap; font-size: 11px;
+  overflow: hidden; text-overflow: ellipsis; cursor: pointer; user-select: none;
+}
+.data-table th:hover { color: #ccc; background: #242444; }
+.data-table .filter-row td { padding: 1px 4px 4px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.data-table .filter-input {
+  width: 100%; box-sizing: border-box; padding: 2px 4px; font-size: 11px; font-family: inherit;
+  background: rgba(15,15,35,0.6); color: #888; border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 2px; outline: none;
+}
+.data-table .filter-input:focus { border-color: rgba(74,144,217,0.3); color: #ccc; }
+.data-table .filter-select {
+  width: 100%; box-sizing: border-box; padding: 2px 2px; font-size: 11px; font-family: inherit;
+  background: rgba(15,15,35,0.6); color: #888; border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 2px; outline: none; cursor: pointer;
+  -webkit-appearance: none; -moz-appearance: none; appearance: none;
+}
+.data-table td { padding: 2px 4px; border-bottom: 1px solid rgba(255,255,255,0.03); vertical-align: middle; overflow: hidden; }
+.data-table tbody tr:hover { background: rgba(255,255,255,0.02); }
+.data-table tbody tr.selected { background: rgba(74,144,217,0.12); }
+.data-table tbody tr.selected input { color: #fff; }
+.data-table tbody tr.selected select { color: #fff; }
+.data-table input {
+  background: transparent; color: #ccc; border: 1px solid transparent;
+  padding: 2px 4px; font-size: 12px; font-family: inherit; width: 100%;
+  border-radius: 2px; outline: none; box-sizing: border-box;
+}
+.data-table input:focus {
+  border-color: rgba(74,144,217,0.4); background: rgba(74,144,217,0.08);
+}
+.data-table input.type-group { color: #ffcc80; }
+.data-table input.type-channel { color: #a5d6a7; }
+.data-table .col-group { width: 11%; }
+.data-table .col-chan { width: 11%; }
+.data-table .col-type { width: 4%; text-align: center; }
+.data-table .col-start { width: 18%; }
+.data-table .col-end { width: 18%; }
+.data-table .col-hp { width: 5%; }
+.data-table .col-color { width: 4%; }
+.data-table .col-text { width: 13%; }
+.data-table .col-show { width: 3%; text-align: center; }
+.data-table .col-size { width: 4%; }
+.data-table .col-props { width: 4%; text-align: center; }
+.data-table .col-del { width: 3%; text-align: center; }
+.data-table .btn-del {
+  background: none; border: none; color: #666; cursor: pointer;
+  font-size: 14px; line-height: 1; padding: 0 4px; font-family: inherit;
+}
+.data-table .btn-del:hover { color: #E74C3C; }
+.data-table .btn-props {
+  background: #2a2a4a; color: #999; border: 1px solid rgba(255,255,255,0.08);
+  padding: 1px 6px; border-radius: 3px; cursor: pointer; font-size: 10px; font-family: inherit;
+}
+.data-table .btn-props:hover { background: #3a3a5a; color: #fff; }
+.data-table input[type="color"] {
+  width: 28px; height: 20px; border: 1px solid rgba(255,255,255,0.12); cursor: pointer;
+  padding: 0; min-width: auto; background: none;
+}
+.data-table select {
+  background: transparent; color: #ccc; border: 1px solid transparent;
+  font-size: 12px; font-family: inherit; cursor: pointer; outline: none;
+  -webkit-appearance: none; -moz-appearance: none; appearance: none;
+  padding: 2px 4px;
+}
+.data-table select:focus { border-color: rgba(74,144,217,0.4); background: rgba(74,144,217,0.08); }
+
+#add-row-btn {
+  margin: 6px 8px; background: #2a2a4a; color: #999; border: 1px dashed rgba(255,255,255,0.12);
+  padding: 5px 16px; border-radius: 4px; cursor: pointer; font-size: 12px; font-family: inherit;
+}
+#add-row-btn:hover { background: #3a3a5a; color: #fff; }
+
+#props-overlay {
+  display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); z-index: 100;
+  align-items: center; justify-content: center;
+}
+#props-overlay.show { display: flex; }
+#props-dialog {
+  background: #1a1a2e; border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px; padding: 16px; min-width: 300px; max-width: 400px;
+}
+#props-dialog h3 { font-size: 13px; color: #eee; margin-bottom: 12px; }
+.props-row { display: flex; gap: 6px; margin-bottom: 6px; align-items: center; }
+.props-row input {
+  background: #0f0f23; color: #ccc; border: 1px solid rgba(255,255,255,0.1);
+  padding: 4px 8px; border-radius: 3px; font-size: 12px; font-family: inherit;
+  flex: 1;
+}
+.props-row .btn-del-prop {
+  background: none; border: none; color: #666; cursor: pointer;
+  font-size: 14px; padding: 0 4px; font-family: inherit;
+}
+.props-row .btn-del-prop:hover { color: #E74C3C; }
+#props-dialog .props-actions { margin-top: 10px; display: flex; gap: 6px; justify-content: flex-end; }
+#props-dialog .props-actions button {
+  background: #2a2a4a; color: #ccc; border: none;
+  padding: 5px 14px; border-radius: 3px; cursor: pointer; font-size: 12px; font-family: inherit;
+}
+#props-dialog .props-actions button:hover { background: #3a3a5a; }
+#props-dialog .props-actions button.primary { background: #4A90D9; color: #fff; }
+#props-dialog .props-actions button.primary:hover { background: #5AA0E9; }
+
+.resize-handle {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+  cursor: ns-resize; z-index: 6;
+}
+.resize-handle:hover, .resize-handle.resizing { background: rgba(74,144,217,0.3); }
+
+#tooltip {
+  position: fixed; pointer-events: none; opacity: 0;
+  background: rgba(20,20,40,0.95); border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px; padding: 10px 14px; font-size: 12px; color: #ddd;
+  z-index: 1000; max-width: 220px; line-height: 1.6;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5); transition: opacity 0.12s;
+}
+#tooltip.visible { opacity: 1; }
+#tooltip .tt-title { font-size: 13px; color: #fff; font-weight: bold; margin-bottom: 4px; }
+#tooltip .tt-row { display: flex; justify-content: space-between; gap: 12px; }
+#tooltip .tt-label { color: #888; }
+#tooltip .tt-value { color: #ddd; text-align: right; }
+</style>
+</head>
+<body>
+
+<div id="toolbar">
+  <button id="btn-import" title="从 JSON 文件导入数据">Import JSON</button>
+  <button id="btn-export" title="导出为 JSON 文件下载">Export JSON</button>
+  <span class="sep"></span>
+  <select id="sel-sample" title="加载示例数据">
+    <option value="">Load Sample ▼</option>
+    <option value="blank">空白模板</option>
+    <option value="taxi">出租车营收</option>
+    <option value="reading">学生阅读</option>
+    <option value="airport">机场跑道</option>
+    <option value="restaurant">饭店餐桌</option>
+    <option value="smt">SMT产线</option>
+  </select>
+  <button id="btn-clear" title="清空所有数据">Clear</button>
+  <span class="grow"></span>
+  <span style="font-size:11px;color:#888;" id="info-stats"></span>
+</div>
+
+<div id="preview-area">
+  <div id="canvas-scroll"><canvas id="preview-canvas"></canvas></div>
+  <div id="preview-toolbar">
+    <button id="btn-fit" title="适应全部数据">Fit</button>
+    <button id="btn-zoomout" title="缩小">-</button>
+    <button id="btn-zoomin" title="放大">+</button>
+    <button id="btn-svg" title="导出 SVG">SVG</button>
+    <button id="btn-png" title="导出 PNG">PNG</button>
+  </div>
+  <div class="resize-handle" id="resize-handle"></div>
+</div>
+
+<div id="tab-bar">
+  <button id="tab-data" class="active">数据</button>
+  <button id="tab-config">配置</button>
+</div>
+
+<div id="editor-area">
+  <div id="config-panel" style="display:none;"></div>
+  <div id="data-panel">
+    <div class="data-table-wrap">
+      <table class="data-table" id="data-table">
+        <thead>
+          <tr>
+            <th class="col-group">Group</th>
+            <th class="col-chan">Channel</th>
+            <th class="col-type">T</th>
+            <th class="col-start">Start</th>
+            <th class="col-end">End</th>
+            <th class="col-hp">H%</th>
+            <th class="col-color">Color</th>
+            <th class="col-text">Text</th>
+            <th class="col-show">显</th>
+            <th class="col-size">号</th>
+            <th class="col-props">Prop</th>
+            <th class="col-del"></th>
+          </tr>
+        </thead>
+        <tbody id="data-tbody"></tbody>
+      </table>
+    </div>
+    <button id="add-row-btn">+ Add Row</button>
+  </div>
+</div>
+
+<div id="props-overlay">
+  <div id="props-dialog">
+    <h3>Custom Properties</h3>
+    <div id="props-list"></div>
+    <div class="props-actions">
+      <button id="props-add-kv">+ Add Property</button>
+      <span style="flex:1;"></span>
+      <button id="props-cancel">Cancel</button>
+      <button id="props-save" class="primary">Save</button>
+    </div>
+  </div>
+</div>
+
+<div id="tooltip"></div>
+
+<script src="js/chart.js"></script>
+<script src="js/editor.js"></script>
+</body>
+</html>

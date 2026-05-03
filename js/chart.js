@@ -117,6 +117,16 @@ class TimelineChart {
     this.render();
   }
 
+  selectBlock(start, end, groupTitle, channelTitle) {
+    this._selectedBlock = { start, end, groupTitle, channelTitle };
+    this.render();
+  }
+
+  deselectBlock() {
+    this._selectedBlock = null;
+    this.render();
+  }
+
   toggleGroup(groupIdx) {
     if (this._collapsedGroups.has(groupIdx)) {
       this._collapsedGroups.delete(groupIdx);
@@ -183,6 +193,7 @@ class TimelineChart {
     this._drawTimeAxis(w);
     this._drawAllChannels(w);
     this._drawHoverHighlight();
+    this._drawSelectedHighlight();
 
     ctx.restore();
 
@@ -802,6 +813,54 @@ class TimelineChart {
     ctx.lineWidth = 2;
     this._drawRoundedRect(x - 1, y - 1, bw + 2, bh + 2, cfg.blockBorderRadius + 1);
     ctx.stroke();
+  }
+
+  _drawSelectedHighlight() {
+    const sel = this._selectedBlock;
+    if (!sel) return;
+
+    const ctx = this.ctx;
+    const cfg = this.config;
+    const effReserve = this._effectiveTextReserveHeight();
+
+    for (const item of this._visData) {
+      if (item.type !== 'channel') continue;
+      const ch = item.channel;
+      if (!sel.channelTitle || ch.title !== sel.channelTitle) continue;
+      if (sel.groupTitle != null && ch._groupTitle !== sel.groupTitle) continue;
+
+      for (const block of ch.blocks || []) {
+        if (block.start !== sel.start || block.end !== sel.end) continue;
+
+        const startTime = new Date(block.start).getTime();
+        const endTime = new Date(block.end).getTime();
+        let x = this._timeToX(startTime);
+        let bw = this._timeToX(endTime) - x;
+        if (bw < cfg.minBlockWidthPx) bw = cfg.minBlockWidthPx;
+
+        const areaTop = item.y + cfg.headerHeight + effReserve;
+        const areaHeight = cfg.channelHeight;
+        const baseline = this.hasNegatives ? (areaTop + areaHeight / 2) : (areaTop + areaHeight);
+
+        const hPercent = block.heightPercent || 0;
+        const maxBlockH = this.hasNegatives ? areaHeight / 2 : areaHeight;
+        let bh = Math.abs(hPercent) / 100 * maxBlockH;
+        if (bh < cfg.minBlockHeightPx) bh = cfg.minBlockHeightPx;
+
+        let by;
+        if (hPercent >= 0) { by = baseline - bh; }
+        else { by = baseline; }
+
+        ctx.save();
+        ctx.strokeStyle = '#4A90D9';
+        ctx.lineWidth = 2.5;
+        ctx.setLineDash([5, 3]);
+        this._drawRoundedRect(x - 1, by - 1, bw + 2, bh + 2, cfg.blockBorderRadius + 1);
+        ctx.stroke();
+        ctx.restore();
+        return;
+      }
+    }
   }
 
   _drawRoundedRect(x, y, w, h, r) {
