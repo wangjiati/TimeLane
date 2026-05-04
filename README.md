@@ -2,6 +2,8 @@
 
 纯前端时间轴可视化工具，类似甘特图但色块高度和颜色可变，用于表达多维度属性在时间轴上的关系。每条通道像一条由色块组成的"彩带"（Lane），随时间轴（Chrono）延展。
 
+> **在线演示**：https://wangjiati.github.io/TimeLane/
+
 ---
 
 ## 功能
@@ -30,7 +32,9 @@
 
 ## 快速开始
 
-启动 HTTP 服务后打开浏览器：
+**在线体验**：访问 [https://wangjiati.github.io/TimeLane/](https://wangjiati.github.io/TimeLane/) 即可使用，无需安装。
+
+本地运行：
 
 ```
 python -m http.server 8080
