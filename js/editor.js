@@ -14,6 +14,7 @@
   const propsOverlay = document.getElementById('props-overlay');
   const propsList = document.getElementById('props-list');
   const tooltip = document.getElementById('tooltip');
+  const btnCursor = document.getElementById('btn-cursor');
 
   // ── Defaults ──────────────────────────────────────────────
   const DEFAULT_THEME = {
@@ -29,14 +30,17 @@
 
   function blankConfig() {
     return {
-      channelHeight: 100, channelGap: 2, headerHeight: 34, footerHeight: 16,
+      channelHeight: 100, channelGap: 2, footerHeight: 16,
       groupHeaderHeight: 28, chartTitle: '', chartTitleHeight: 32,
       labelWidth: 140, timeAxisHeight: 48, defaultBlockColor: '#4A90D9',
       minBlockHeightPx: 2, minBlockWidthPx: 2,
       fontFamily: "'Microsoft YaHei', 'PingFang SC', sans-serif",
       timeFontSize: 12, blockFontSize: 12, eventFontSize: 10,
+      headerFontSize: 12,
+      groupHeaderFontSize: 11,
+      chartTitleFontSize: 14,
       timeFormat: 'HH:mm', showGridLines: true, showCurrentTimeLine: false,
-      showEvents: true, blockTextPosition: 'center', blockTextShow: true,
+      showEvents: true, showFooter: true, blockTextPosition: 'center', blockTextShow: true,
       zoomMin: 0.05, zoomMax: 50, exportScale: 2,
       blockBorderRadius: 3, blockBorderWidth: 0, blockBorderColor: 'rgba(0,0,0,0.2)',
       theme: { ...DEFAULT_THEME },
@@ -203,16 +207,16 @@
     { sec: '基础', key: 'labelWidth', label: '标签宽度', type: 'range', min: 60, max: 300, step: 1 },
     { sec: '通道', key: 'channelHeight', label: '通道高度', type: 'range', min: 20, max: 400, step: 1 },
     { sec: '通道', key: 'channelGap', label: '通道间距', type: 'range', min: 0, max: 20, step: 1 },
-    { sec: '通道', key: 'headerHeight', label: '头部高度', type: 'range', min: 10, max: 80, step: 1 },
     { sec: '通道', key: 'footerHeight', label: '底部高度', type: 'range', min: 0, max: 40, step: 1 },
-    { sec: '通道', key: 'groupHeaderHeight', label: '分组头高度', type: 'range', min: 10, max: 60, step: 1 },
-    { sec: '通道', key: 'chartTitleHeight', label: '标题区高度', type: 'range', min: 10, max: 60, step: 1 },
+    { sec: '通道', key: 'showFooter', label: '显示底部说明', type: 'bool' },
+    { sec: '通道', key: 'groupHeaderHeight', label: '分组头高度', type: 'range', min: 0, max: 60, step: 1 },
+    { sec: '通道', key: 'chartTitleHeight', label: '图表标题高', type: 'range', min: 10, max: 60, step: 1 },
     { sec: '时间轴', key: 'timeAxisHeight', label: '时间轴高度', type: 'range', min: 24, max: 80, step: 1 },
     { sec: '时间轴', key: 'showGridLines', label: '显示网格线', type: 'bool' },
     { sec: '时间轴', key: 'showCurrentTimeLine', label: '显示当前时间线', type: 'bool' },
     { sec: '时间轴', key: 'timeFontSize', label: '时间字号', type: 'range', min: 8, max: 24, step: 1 },
     { sec: '色块', key: 'blockTextShow', label: '显示色块文字', type: 'bool' },
-    { sec: '色块', key: 'blockTextPosition', label: '文字位置', type: 'select', opts: ['center', 'top', 'bottom', 'above'] },
+    { sec: '色块', key: 'blockTextPosition', label: '文字位置', type: 'select', opts: ['center', 'top', 'bottom', 'above', 'below'] },
     { sec: '色块', key: 'defaultBlockColor', label: '默认色块颜色', type: 'color' },
     { sec: '色块', key: 'blockFontSize', label: '色块字号', type: 'range', min: 6, max: 24, step: 1 },
     { sec: '色块', key: 'blockBorderRadius', label: '圆角半径', type: 'range', min: 0, max: 20, step: 1 },
@@ -220,6 +224,9 @@
     { sec: '色块', key: 'blockBorderColor', label: '边框颜色', type: 'color' },
     { sec: '色块', key: 'minBlockHeightPx', label: '最小色块高(px)', type: 'range', min: 0, max: 10, step: 1 },
     { sec: '色块', key: 'minBlockWidthPx', label: '最小色块宽(px)', type: 'range', min: 0, max: 10, step: 1 },
+    { sec: '通道', key: 'headerFontSize', label: '标题字号', type: 'range', min: 8, max: 20, step: 1 },
+    { sec: '通道', key: 'groupHeaderFontSize', label: '分组头字号', type: 'range', min: 8, max: 20, step: 1 },
+    { sec: '基础', key: 'chartTitleFontSize', label: '图表标题字号', type: 'range', min: 10, max: 28, step: 1 },
     { sec: '事件', key: 'showEvents', label: '显示事件', type: 'bool' },
     { sec: '事件', key: 'eventFontSize', label: '事件字号', type: 'range', min: 6, max: 24, step: 1 },
     { sec: '高级', key: 'fontFamily', label: '字体', type: 'text' },
@@ -365,7 +372,7 @@
 
     // Live update chart for config changes
     if (chart) {
-      if (['channelHeight', 'channelGap', 'headerHeight', 'footerHeight',
+      if (['channelHeight', 'channelGap', 'footerHeight',
         'groupHeaderHeight', 'chartTitleHeight', 'labelWidth', 'timeAxisHeight',
         'minBlockHeightPx', 'minBlockWidthPx', 'blockBorderRadius',
         'blockBorderWidth'].indexOf(key) >= 0) {
@@ -1035,6 +1042,41 @@
     }
   });
 
+  // ── Compact mode ──────────────────────────────────────────
+  var compactOn = false;
+  var savedCompactConfig = null;
+  document.getElementById('btn-compact').addEventListener('click', function () {
+    compactOn = !compactOn;
+    if (chart) {
+      var cfg = data.config;
+      if (compactOn) {
+        savedCompactConfig = {
+          channelGap: cfg.channelGap, footerHeight: cfg.footerHeight,
+          groupHeaderHeight: cfg.groupHeaderHeight,
+          showFooter: cfg.showFooter,
+          showEvents: cfg.showEvents, blockTextPosition: cfg.blockTextPosition
+        };
+        cfg.channelGap = 0;
+        cfg.footerHeight = 0;
+        cfg.groupHeaderHeight = 0;
+        cfg.showFooter = false;
+        cfg.showEvents = false;
+        cfg.blockTextPosition = 'center';
+      } else if (savedCompactConfig) {
+        cfg.channelGap = savedCompactConfig.channelGap;
+        cfg.footerHeight = savedCompactConfig.footerHeight;
+        cfg.groupHeaderHeight = savedCompactConfig.groupHeaderHeight;
+        cfg.showFooter = savedCompactConfig.showFooter;
+        cfg.showEvents = savedCompactConfig.showEvents;
+        cfg.blockTextPosition = savedCompactConfig.blockTextPosition;
+        savedCompactConfig = null;
+      }
+      scheduleRefresh();
+      if (tabConfig.classList.contains('active')) renderConfigTable();
+    }
+    this.classList.toggle('active', compactOn);
+  });
+
   // ── Load sample ───────────────────────────────────────────
   document.getElementById('sel-sample').addEventListener('change', function () {
     var val = this.value;
@@ -1118,6 +1160,19 @@
   });
   document.getElementById('btn-png').addEventListener('click', function () {
     if (chart) chart.exportPNG();
+  });
+
+  var cursorOn = false;
+  var cursor2On = false;
+  document.getElementById('btn-cursor').addEventListener('click', function () {
+    cursorOn = !cursorOn;
+    if (chart) chart.setCursor1(cursorOn);
+    btnCursor.classList.toggle('active', cursorOn);
+  });
+  document.getElementById('btn-cursor2').addEventListener('click', function () {
+    cursor2On = !cursor2On;
+    if (chart) chart.setCursor2(cursor2On);
+    document.getElementById('btn-cursor2').classList.toggle('active', cursor2On);
   });
 
   // ── Resize handle ─────────────────────────────────────────

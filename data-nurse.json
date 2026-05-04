@@ -1,0 +1,1387 @@
+{
+  "groups": [
+    {
+      "title": "内科一区",
+      "description": "6名护士 — 白→中→夜 轮转",
+      "channels": [
+        {
+          "title": "周敏",
+          "description": "内科一区",
+          "footer": "4 班次",
+          "blocks": [
+            {
+              "start": "2024-06-03T08:00:00",
+              "end": "2024-06-03T16:00:00",
+              "heightPercent": 97,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "4人"
+              }
+            },
+            {
+              "start": "2024-06-05T16:00:00",
+              "end": "2024-06-06T00:00:00",
+              "heightPercent": 94,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "5人"
+              }
+            },
+            {
+              "start": "2024-06-07T00:00:00",
+              "end": "2024-06-07T08:00:00",
+              "heightPercent": 73,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "6人"
+              }
+            },
+            {
+              "start": "2024-06-09T08:00:00",
+              "end": "2024-06-09T16:00:00",
+              "heightPercent": 78,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "5人"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "吴芳",
+          "description": "内科一区",
+          "footer": "4 班次",
+          "blocks": [
+            {
+              "start": "2024-06-03T16:00:00",
+              "end": "2024-06-04T00:00:00",
+              "heightPercent": 90,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "7人"
+              }
+            },
+            {
+              "start": "2024-06-05T00:00:00",
+              "end": "2024-06-05T08:00:00",
+              "heightPercent": 88,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "6人"
+              }
+            },
+            {
+              "start": "2024-06-07T08:00:00",
+              "end": "2024-06-07T16:00:00",
+              "heightPercent": 59,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "6人"
+              }
+            },
+            {
+              "start": "2024-06-09T16:00:00",
+              "end": "2024-06-10T00:00:00",
+              "heightPercent": 60,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "5人"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "郑丽",
+          "description": "内科一区",
+          "footer": "4 班次",
+          "blocks": [
+            {
+              "start": "2024-06-03T00:00:00",
+              "end": "2024-06-03T08:00:00",
+              "heightPercent": 62,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "2人"
+              }
+            },
+            {
+              "start": "2024-06-05T08:00:00",
+              "end": "2024-06-05T16:00:00",
+              "heightPercent": 72,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "5人"
+              }
+            },
+            {
+              "start": "2024-06-07T16:00:00",
+              "end": "2024-06-08T00:00:00",
+              "heightPercent": 64,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "5人"
+              }
+            },
+            {
+              "start": "2024-06-09T00:00:00",
+              "end": "2024-06-09T08:00:00",
+              "heightPercent": 81,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "4人"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "王燕",
+          "description": "内科一区",
+          "footer": "3 班次",
+          "blocks": [
+            {
+              "start": "2024-06-04T08:00:00",
+              "end": "2024-06-04T16:00:00",
+              "heightPercent": 64,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "7人"
+              }
+            },
+            {
+              "start": "2024-06-06T16:00:00",
+              "end": "2024-06-07T00:00:00",
+              "heightPercent": 75,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "5人"
+              }
+            },
+            {
+              "start": "2024-06-08T00:00:00",
+              "end": "2024-06-08T08:00:00",
+              "heightPercent": 90,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "3人"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "冯静",
+          "description": "内科一区",
+          "footer": "3 班次",
+          "blocks": [
+            {
+              "start": "2024-06-04T16:00:00",
+              "end": "2024-06-05T00:00:00",
+              "heightPercent": 60,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "7人"
+              }
+            },
+            {
+              "start": "2024-06-06T00:00:00",
+              "end": "2024-06-06T08:00:00",
+              "heightPercent": 76,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "5人"
+              }
+            },
+            {
+              "start": "2024-06-08T08:00:00",
+              "end": "2024-06-08T16:00:00",
+              "heightPercent": 64,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "9人"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "褚洁",
+          "description": "内科一区",
+          "footer": "3 班次",
+          "blocks": [
+            {
+              "start": "2024-06-04T00:00:00",
+              "end": "2024-06-04T08:00:00",
+              "heightPercent": 74,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "7人"
+              }
+            },
+            {
+              "start": "2024-06-06T08:00:00",
+              "end": "2024-06-06T16:00:00",
+              "heightPercent": 68,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "9人"
+              }
+            },
+            {
+              "start": "2024-06-08T16:00:00",
+              "end": "2024-06-09T00:00:00",
+              "heightPercent": 70,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "6人"
+              }
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "title": "外科二区",
+      "description": "6名护士 — 白→中→夜 轮转",
+      "channels": [
+        {
+          "title": "何强",
+          "description": "外科二区",
+          "footer": "4 班次",
+          "blocks": [
+            {
+              "start": "2024-06-03T08:00:00",
+              "end": "2024-06-03T16:00:00",
+              "heightPercent": 69,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "7人"
+              }
+            },
+            {
+              "start": "2024-06-05T16:00:00",
+              "end": "2024-06-06T00:00:00",
+              "heightPercent": 75,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "8人"
+              }
+            },
+            {
+              "start": "2024-06-07T00:00:00",
+              "end": "2024-06-07T08:00:00",
+              "heightPercent": 86,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "8人"
+              }
+            },
+            {
+              "start": "2024-06-09T08:00:00",
+              "end": "2024-06-09T16:00:00",
+              "heightPercent": 97,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "7人"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "杨柳",
+          "description": "外科二区",
+          "footer": "4 班次",
+          "blocks": [
+            {
+              "start": "2024-06-03T16:00:00",
+              "end": "2024-06-04T00:00:00",
+              "heightPercent": 65,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "8人"
+              }
+            },
+            {
+              "start": "2024-06-05T00:00:00",
+              "end": "2024-06-05T08:00:00",
+              "heightPercent": 72,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "3人"
+              }
+            },
+            {
+              "start": "2024-06-07T08:00:00",
+              "end": "2024-06-07T16:00:00",
+              "heightPercent": 82,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "4人"
+              }
+            },
+            {
+              "start": "2024-06-09T16:00:00",
+              "end": "2024-06-10T00:00:00",
+              "heightPercent": 62,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "6人"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "赵洋",
+          "description": "外科二区",
+          "footer": "4 班次",
+          "blocks": [
+            {
+              "start": "2024-06-03T00:00:00",
+              "end": "2024-06-03T08:00:00",
+              "heightPercent": 75,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "9人"
+              }
+            },
+            {
+              "start": "2024-06-05T08:00:00",
+              "end": "2024-06-05T16:00:00",
+              "heightPercent": 84,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "5人"
+              }
+            },
+            {
+              "start": "2024-06-07T16:00:00",
+              "end": "2024-06-08T00:00:00",
+              "heightPercent": 99,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "6人"
+              }
+            },
+            {
+              "start": "2024-06-09T00:00:00",
+              "end": "2024-06-09T08:00:00",
+              "heightPercent": 82,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "8人"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "钱磊",
+          "description": "外科二区",
+          "footer": "3 班次",
+          "blocks": [
+            {
+              "start": "2024-06-04T08:00:00",
+              "end": "2024-06-04T16:00:00",
+              "heightPercent": 63,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "9人"
+              }
+            },
+            {
+              "start": "2024-06-06T16:00:00",
+              "end": "2024-06-07T00:00:00",
+              "heightPercent": 89,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "7人"
+              }
+            },
+            {
+              "start": "2024-06-08T00:00:00",
+              "end": "2024-06-08T08:00:00",
+              "heightPercent": 93,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "4人"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "孙伟",
+          "description": "外科二区",
+          "footer": "3 班次",
+          "blocks": [
+            {
+              "start": "2024-06-04T16:00:00",
+              "end": "2024-06-05T00:00:00",
+              "heightPercent": 88,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "6人"
+              }
+            },
+            {
+              "start": "2024-06-06T00:00:00",
+              "end": "2024-06-06T08:00:00",
+              "heightPercent": 77,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "8人"
+              }
+            },
+            {
+              "start": "2024-06-08T08:00:00",
+              "end": "2024-06-08T16:00:00",
+              "heightPercent": 66,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "7人"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "李刚",
+          "description": "外科二区",
+          "footer": "3 班次",
+          "blocks": [
+            {
+              "start": "2024-06-04T00:00:00",
+              "end": "2024-06-04T08:00:00",
+              "heightPercent": 34,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "2人"
+              }
+            },
+            {
+              "start": "2024-06-06T08:00:00",
+              "end": "2024-06-06T16:00:00",
+              "heightPercent": 55,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "5人"
+              }
+            },
+            {
+              "start": "2024-06-08T16:00:00",
+              "end": "2024-06-09T00:00:00",
+              "heightPercent": 85,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "9人"
+              }
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "title": "儿科三区",
+      "description": "6名护士 — 白→中→夜 轮转",
+      "channels": [
+        {
+          "title": "孙雨",
+          "description": "儿科三区",
+          "footer": "4 班次",
+          "blocks": [
+            {
+              "start": "2024-06-03T08:00:00",
+              "end": "2024-06-03T16:00:00",
+              "heightPercent": 54,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "7人"
+              }
+            },
+            {
+              "start": "2024-06-05T16:00:00",
+              "end": "2024-06-06T00:00:00",
+              "heightPercent": 96,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "9人"
+              }
+            },
+            {
+              "start": "2024-06-07T00:00:00",
+              "end": "2024-06-07T08:00:00",
+              "heightPercent": 98,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "2人"
+              }
+            },
+            {
+              "start": "2024-06-09T08:00:00",
+              "end": "2024-06-09T16:00:00",
+              "heightPercent": 78,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "5人"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "李静",
+          "description": "儿科三区",
+          "footer": "4 班次",
+          "blocks": [
+            {
+              "start": "2024-06-03T16:00:00",
+              "end": "2024-06-04T00:00:00",
+              "heightPercent": 67,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "9人"
+              }
+            },
+            {
+              "start": "2024-06-05T00:00:00",
+              "end": "2024-06-05T08:00:00",
+              "heightPercent": 44,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "8人"
+              }
+            },
+            {
+              "start": "2024-06-07T08:00:00",
+              "end": "2024-06-07T16:00:00",
+              "heightPercent": 75,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "5人"
+              }
+            },
+            {
+              "start": "2024-06-09T16:00:00",
+              "end": "2024-06-10T00:00:00",
+              "heightPercent": 97,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "8人"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "张涛",
+          "description": "儿科三区",
+          "footer": "4 班次",
+          "blocks": [
+            {
+              "start": "2024-06-03T00:00:00",
+              "end": "2024-06-03T08:00:00",
+              "heightPercent": 62,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "8人"
+              }
+            },
+            {
+              "start": "2024-06-05T08:00:00",
+              "end": "2024-06-05T16:00:00",
+              "heightPercent": 69,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "5人"
+              }
+            },
+            {
+              "start": "2024-06-07T16:00:00",
+              "end": "2024-06-08T00:00:00",
+              "heightPercent": 73,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "6人"
+              }
+            },
+            {
+              "start": "2024-06-09T00:00:00",
+              "end": "2024-06-09T08:00:00",
+              "heightPercent": 58,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "7人"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "刘媛",
+          "description": "儿科三区",
+          "footer": "3 班次",
+          "blocks": [
+            {
+              "start": "2024-06-04T08:00:00",
+              "end": "2024-06-04T16:00:00",
+              "heightPercent": 66,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "9人"
+              }
+            },
+            {
+              "start": "2024-06-06T16:00:00",
+              "end": "2024-06-07T00:00:00",
+              "heightPercent": 72,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "5人"
+              }
+            },
+            {
+              "start": "2024-06-08T00:00:00",
+              "end": "2024-06-08T08:00:00",
+              "heightPercent": 78,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "3人"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "马丽",
+          "description": "儿科三区",
+          "footer": "3 班次",
+          "blocks": [
+            {
+              "start": "2024-06-04T16:00:00",
+              "end": "2024-06-05T00:00:00",
+              "heightPercent": 90,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "5人"
+              }
+            },
+            {
+              "start": "2024-06-06T00:00:00",
+              "end": "2024-06-06T08:00:00",
+              "heightPercent": 52,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "3人"
+              }
+            },
+            {
+              "start": "2024-06-08T08:00:00",
+              "end": "2024-06-08T16:00:00",
+              "heightPercent": 97,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "8人"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "赵芳",
+          "description": "儿科三区",
+          "footer": "3 班次",
+          "blocks": [
+            {
+              "start": "2024-06-04T00:00:00",
+              "end": "2024-06-04T08:00:00",
+              "heightPercent": 44,
+              "color": "#37474F",
+              "text": "夜班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "夜班",
+                "病人数": "3人"
+              }
+            },
+            {
+              "start": "2024-06-06T08:00:00",
+              "end": "2024-06-06T16:00:00",
+              "heightPercent": 85,
+              "color": "#FF9800",
+              "text": "白班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "白班",
+                "病人数": "5人"
+              }
+            },
+            {
+              "start": "2024-06-08T16:00:00",
+              "end": "2024-06-09T00:00:00",
+              "heightPercent": 98,
+              "color": "#5C6BC0",
+              "text": "中班",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "班次": "中班",
+                "病人数": "5人"
+              }
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "title": "护理管理组",
+      "description": "3名护士长 — 行政班",
+      "channels": [
+        {
+          "title": "陈主任",
+          "description": "内科一区护士长",
+          "footer": "5 行政班",
+          "blocks": [
+            {
+              "start": "2024-06-04T08:00:00",
+              "end": "2024-06-04T16:00:00",
+              "heightPercent": 71,
+              "color": "#AB47BC",
+              "text": "行政+查房",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "职责": "护理管理",
+                "查房": "内科一区",
+                "会议": "3场"
+              }
+            },
+            {
+              "start": "2024-06-05T08:00:00",
+              "end": "2024-06-05T16:00:00",
+              "heightPercent": 84,
+              "color": "#AB47BC",
+              "text": "行政+查房",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "职责": "护理管理",
+                "查房": "内科一区",
+                "会议": "1场"
+              }
+            },
+            {
+              "start": "2024-06-07T08:00:00",
+              "end": "2024-06-07T16:00:00",
+              "heightPercent": 62,
+              "color": "#AB47BC",
+              "text": "行政+查房",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "职责": "护理管理",
+                "查房": "内科一区",
+                "会议": "1场"
+              }
+            },
+            {
+              "start": "2024-06-08T08:00:00",
+              "end": "2024-06-08T16:00:00",
+              "heightPercent": 91,
+              "color": "#AB47BC",
+              "text": "行政+查房",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "职责": "护理管理",
+                "查房": "内科一区",
+                "会议": "1场"
+              }
+            },
+            {
+              "start": "2024-06-09T08:00:00",
+              "end": "2024-06-09T16:00:00",
+              "heightPercent": 88,
+              "color": "#AB47BC",
+              "text": "行政+查房",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "职责": "护理管理",
+                "查房": "内科一区",
+                "会议": "2场"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "林主任",
+          "description": "外科二区护士长",
+          "footer": "5 行政班",
+          "blocks": [
+            {
+              "start": "2024-06-04T08:00:00",
+              "end": "2024-06-04T16:00:00",
+              "heightPercent": 68,
+              "color": "#AB47BC",
+              "text": "行政+查房",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "职责": "护理管理",
+                "查房": "外科二区",
+                "会议": "3场"
+              }
+            },
+            {
+              "start": "2024-06-05T08:00:00",
+              "end": "2024-06-05T16:00:00",
+              "heightPercent": 98,
+              "color": "#AB47BC",
+              "text": "行政+查房",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "职责": "护理管理",
+                "查房": "外科二区",
+                "会议": "1场"
+              }
+            },
+            {
+              "start": "2024-06-07T08:00:00",
+              "end": "2024-06-07T16:00:00",
+              "heightPercent": 68,
+              "color": "#AB47BC",
+              "text": "行政+查房",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "职责": "护理管理",
+                "查房": "外科二区",
+                "会议": "3场"
+              }
+            },
+            {
+              "start": "2024-06-08T08:00:00",
+              "end": "2024-06-08T16:00:00",
+              "heightPercent": 69,
+              "color": "#AB47BC",
+              "text": "行政+查房",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "职责": "护理管理",
+                "查房": "外科二区",
+                "会议": "3场"
+              }
+            },
+            {
+              "start": "2024-06-09T08:00:00",
+              "end": "2024-06-09T16:00:00",
+              "heightPercent": 79,
+              "color": "#AB47BC",
+              "text": "行政+查房",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "职责": "护理管理",
+                "查房": "外科二区",
+                "会议": "2场"
+              }
+            }
+          ],
+          "events": []
+        },
+        {
+          "title": "黄主任",
+          "description": "儿科三区护士长",
+          "footer": "5 行政班",
+          "blocks": [
+            {
+              "start": "2024-06-04T08:00:00",
+              "end": "2024-06-04T16:00:00",
+              "heightPercent": 88,
+              "color": "#AB47BC",
+              "text": "行政+查房",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "职责": "护理管理",
+                "查房": "儿科三区",
+                "会议": "3场"
+              }
+            },
+            {
+              "start": "2024-06-05T08:00:00",
+              "end": "2024-06-05T16:00:00",
+              "heightPercent": 61,
+              "color": "#AB47BC",
+              "text": "行政+查房",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "职责": "护理管理",
+                "查房": "儿科三区",
+                "会议": "3场"
+              }
+            },
+            {
+              "start": "2024-06-07T08:00:00",
+              "end": "2024-06-07T16:00:00",
+              "heightPercent": 74,
+              "color": "#AB47BC",
+              "text": "行政+查房",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "职责": "护理管理",
+                "查房": "儿科三区",
+                "会议": "1场"
+              }
+            },
+            {
+              "start": "2024-06-08T08:00:00",
+              "end": "2024-06-08T16:00:00",
+              "heightPercent": 70,
+              "color": "#AB47BC",
+              "text": "行政+查房",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "职责": "护理管理",
+                "查房": "儿科三区",
+                "会议": "2场"
+              }
+            },
+            {
+              "start": "2024-06-09T08:00:00",
+              "end": "2024-06-09T16:00:00",
+              "heightPercent": 84,
+              "color": "#AB47BC",
+              "text": "行政+查房",
+              "textConfig": {
+                "show": true,
+                "size": 11
+              },
+              "properties": {
+                "职责": "护理管理",
+                "查房": "儿科三区",
+                "会议": "1场"
+              }
+            }
+          ],
+          "events": []
+        }
+      ]
+    }
+  ],
+  "config": {
+    "chartTitle": "医院护士值班表 — 7天 白→中→夜 轮转",
+    "channelHeight": 70,
+    "timeFormat": "MM-DD HH:mm",
+    "showEvents": true
+  }
+}

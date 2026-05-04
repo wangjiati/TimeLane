@@ -89,6 +89,50 @@ document.getElementById('btn-zoomout').addEventListener('click', () => {
 document.getElementById('btn-svg').addEventListener('click', () => chart.exportSVG());
 document.getElementById('btn-png').addEventListener('click', () => chart.exportPNG());
 
+let cursor1On = false, cursor2On = false;
+document.getElementById('btn-cursor').addEventListener('click', function () {
+  cursor1On = !cursor1On;
+  chart.setCursor1(cursor1On);
+  this.classList.toggle('active', cursor1On);
+});
+document.getElementById('btn-cursor2').addEventListener('click', function () {
+  cursor2On = !cursor2On;
+  chart.setCursor2(cursor2On);
+  this.classList.toggle('active', cursor2On);
+});
+
+// Compact mode
+let compactOn = false;
+let savedCompactCfg = null;
+document.getElementById('btn-compact').addEventListener('click', function () {
+  compactOn = !compactOn;
+  var cfg = chart.config;
+  if (compactOn) {
+    savedCompactCfg = {
+      channelGap: cfg.channelGap, footerHeight: cfg.footerHeight,
+      groupHeaderHeight: cfg.groupHeaderHeight,
+      showFooter: cfg.showFooter,
+      showEvents: cfg.showEvents, blockTextPosition: cfg.blockTextPosition
+    };
+    chart.updateConfig('channelGap', 0);
+    chart.updateConfig('footerHeight', 0);
+    chart.updateConfig('groupHeaderHeight', 0);
+    chart.updateConfig('showFooter', false);
+    chart.updateConfig('showEvents', false);
+    chart.updateConfig('blockTextPosition', 'center');
+  } else if (savedCompactCfg) {
+    chart.updateConfig('channelGap', savedCompactCfg.channelGap);
+    chart.updateConfig('footerHeight', savedCompactCfg.footerHeight);
+    chart.updateConfig('groupHeaderHeight', savedCompactCfg.groupHeaderHeight);
+    chart.updateConfig('showFooter', savedCompactCfg.showFooter);
+    chart.updateConfig('showEvents', savedCompactCfg.showEvents);
+    chart.updateConfig('blockTextPosition', savedCompactCfg.blockTextPosition);
+    savedCompactCfg = null;
+  }
+  syncControls();
+  this.classList.toggle('active', compactOn);
+});
+
 const chHeightSlider = document.getElementById('cfg-chHeight');
 const valChHeight = document.getElementById('val-chHeight');
 chHeightSlider.addEventListener('input', () => {
@@ -129,6 +173,14 @@ eventFontSlider.addEventListener('input', () => {
   chart.updateConfig('eventFontSize', v);
 });
 
+const hdrFontSlider = document.getElementById('cfg-hdrFont');
+const valHdrFont = document.getElementById('val-hdrFont');
+hdrFontSlider.addEventListener('input', () => {
+  const v = parseInt(hdrFontSlider.value);
+  valHdrFont.textContent = v;
+  chart.updateConfig('headerFontSize', v);
+});
+
 document.getElementById('cfg-timeFmt').addEventListener('change', (e) => {
   chart.updateConfig('timeFormat', e.target.value);
 });
@@ -141,12 +193,64 @@ document.getElementById('cfg-grid').addEventListener('change', (e) => {
   chart.updateConfig('showGridLines', e.target.checked);
 });
 
+document.getElementById('cfg-footerShow').addEventListener('change', (e) => {
+  chart.updateConfig('showFooter', e.target.checked);
+});
+
+const footerHSlider = document.getElementById('cfg-footerH');
+const valFooterH = document.getElementById('val-footerH');
+footerHSlider.addEventListener('input', () => {
+  const v = parseInt(footerHSlider.value);
+  valFooterH.textContent = v;
+  chart.updateConfig('footerHeight', v);
+});
+
+const chGapSlider = document.getElementById('cfg-chGap');
+const valChGap = document.getElementById('val-chGap');
+chGapSlider.addEventListener('input', () => {
+  const v = parseInt(chGapSlider.value);
+  valChGap.textContent = v;
+  chart.updateConfig('channelGap', v);
+});
+
 const labelWSlider = document.getElementById('cfg-labelW');
 const valLabelW = document.getElementById('val-labelW');
 labelWSlider.addEventListener('input', () => {
   const v = parseInt(labelWSlider.value);
   valLabelW.textContent = v;
   chart.updateConfig('labelWidth', v);
+});
+
+const timeAxisHSlider = document.getElementById('cfg-timeAxisH');
+const valTimeAxisH = document.getElementById('val-timeAxisH');
+timeAxisHSlider.addEventListener('input', () => {
+  const v = parseInt(timeAxisHSlider.value);
+  valTimeAxisH.textContent = v;
+  chart.updateConfig('timeAxisHeight', v);
+});
+
+const grpHdrHSlider = document.getElementById('cfg-grpHdrH');
+const valGrpHdrH = document.getElementById('val-grpHdrH');
+grpHdrHSlider.addEventListener('input', () => {
+  const v = parseInt(grpHdrHSlider.value);
+  valGrpHdrH.textContent = v;
+  chart.updateConfig('groupHeaderHeight', v);
+});
+
+const grpHdrFontSlider = document.getElementById('cfg-grpHdrFont');
+const valGrpHdrFont = document.getElementById('val-grpHdrFont');
+grpHdrFontSlider.addEventListener('input', () => {
+  const v = parseInt(grpHdrFontSlider.value);
+  valGrpHdrFont.textContent = v;
+  chart.updateConfig('groupHeaderFontSize', v);
+});
+
+const chartTitleFontSlider = document.getElementById('cfg-chartTitleFont');
+const valChartTitleFont = document.getElementById('val-chartTitleFont');
+chartTitleFontSlider.addEventListener('input', () => {
+  const v = parseInt(chartTitleFontSlider.value);
+  valChartTitleFont.textContent = v;
+  chart.updateConfig('chartTitleFontSize', v);
 });
 
 document.querySelectorAll('.theme-btn').forEach(btn => {
@@ -185,11 +289,26 @@ function syncControls() {
   document.getElementById('val-timeFont').textContent = cfg.timeFontSize;
   document.getElementById('cfg-eventFont').value = cfg.eventFontSize;
   document.getElementById('val-eventFont').textContent = cfg.eventFontSize;
+  document.getElementById('cfg-hdrFont').value = cfg.headerFontSize;
+  document.getElementById('val-hdrFont').textContent = cfg.headerFontSize;
   document.getElementById('cfg-timeFmt').value = cfg.timeFormat;
   document.getElementById('cfg-events').checked = cfg.showEvents;
+  document.getElementById('cfg-chGap').value = cfg.channelGap;
+  document.getElementById('val-chGap').textContent = cfg.channelGap;
+  document.getElementById('cfg-footerShow').checked = cfg.showFooter;
+  document.getElementById('cfg-footerH').value = cfg.footerHeight;
+  document.getElementById('val-footerH').textContent = cfg.footerHeight;
+  document.getElementById('cfg-grpHdrH').value = cfg.groupHeaderHeight;
+  document.getElementById('val-grpHdrH').textContent = cfg.groupHeaderHeight;
+  document.getElementById('cfg-grpHdrFont').value = cfg.groupHeaderFontSize;
+  document.getElementById('val-grpHdrFont').textContent = cfg.groupHeaderFontSize;
+  document.getElementById('cfg-chartTitleFont').value = cfg.chartTitleFontSize;
+  document.getElementById('val-chartTitleFont').textContent = cfg.chartTitleFontSize;
   document.getElementById('cfg-grid').checked = cfg.showGridLines;
   document.getElementById('cfg-labelW').value = cfg.labelWidth;
   document.getElementById('val-labelW').textContent = cfg.labelWidth;
+  document.getElementById('cfg-timeAxisH').value = cfg.timeAxisHeight;
+  document.getElementById('val-timeAxisH').textContent = cfg.timeAxisHeight;
 }
 
 function applyPageTheme(name) {
