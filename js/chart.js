@@ -31,6 +31,8 @@ class TimelineChart {
     this._visData = [];
     this._totalVisContentHeight = 0;
     this._rendering = false;
+    this._scrollY = 0;
+    this._isExport = false;
 
     this.config = this._mergeConfig({});
 
@@ -162,6 +164,7 @@ class TimelineChart {
     } else {
       this._collapsedGroups.add(groupIdx);
     }
+    this._scrollY = Math.min(this._scrollY, this._maxScrollY);
     this._resize();
   }
 
@@ -177,20 +180,26 @@ class TimelineChart {
   exportPNG() {
     const scale = this.config.exportScale || 2;
     const w = this.canvas.clientWidth;
-    const h = Math.max(this.canvas.clientHeight, this._totalContentHeight);
+    const h = this._totalContentHeight;
     const offCanvas = document.createElement('canvas');
     offCanvas.width = w * scale;
     offCanvas.height = h * scale;
     const offCtx = offCanvas.getContext('2d');
     const origCanvas = this.canvas;
     const origCtx = this.ctx;
+    const origDpr = this.dpr;
+    const origScrollY = this._scrollY;
     this.canvas = offCanvas;
     this.ctx = offCtx;
     this.dpr = scale;
+    this._isExport = true;
+    this._scrollY = 0;
     this.render();
     this.canvas = origCanvas;
     this.ctx = origCtx;
-    this.dpr = window.devicePixelRatio || 1;
+    this.dpr = origDpr;
+    this._isExport = false;
+    this._scrollY = origScrollY;
     this._resize();
     offCanvas.toBlob(blob => {
       const url = URL.createObjectURL(blob);
@@ -205,7 +214,10 @@ class TimelineChart {
     this._rendering = true;
 
     this._prepareLayout();
-    this._resize();
+    if (!this._isExport) {
+      this._resize();
+      this._scrollY = Math.min(this._scrollY, this._maxScrollY);
+    }
     this._syncLockedCursors();
 
     const ctx = this.ctx;
@@ -216,15 +228,39 @@ class TimelineChart {
     ctx.scale(this.dpr, this.dpr);
     ctx.clearRect(0, 0, w, h);
 
-    this._drawBackground(w, h);
-    this._drawChartTitle(w);
-    this._drawLabels(w);
-    this._drawGridLines(w);
-    this._drawTimeAxis(w);
-    this._drawAllChannels(w);
-    this._drawHoverHighlight();
-    this._drawSelectedHighlight();
-    this._drawCursorLine();
+    if (this._isExport) {
+      this._drawBackground(w, h);
+      this._drawChartTitle(w);
+      this._drawLabels(w);
+      this._drawGridLines(w);
+      this._drawTimeAxis(w);
+      this._drawAllChannels(w);
+      this._drawHoverHighlight();
+      this._drawSelectedHighlight();
+      this._drawCursorLine();
+    } else {
+      const headerH = this._headerBottom;
+
+      this._drawBackground(w, h);
+
+      // Scrolling content: labels, grid lines, channels — clipped below header
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(0, headerH, w, h - headerH);
+      ctx.clip();
+      ctx.translate(0, -this._scrollY);
+      this._drawLabels(w);
+      this._drawGridLines(w);
+      this._drawAllChannels(w);
+      this._drawHoverHighlight();
+      this._drawSelectedHighlight();
+      ctx.restore();
+
+      // Fixed header on top
+      this._drawChartTitle(w);
+      this._drawTimeAxis(w);
+      this._drawCursorLine();
+    }
 
     ctx.restore();
 
@@ -263,6 +299,11 @@ class TimelineChart {
       return base + (this.config.chartTitleHeight || 30);
     }
     return base;
+  }
+
+  get _maxScrollY() {
+    if (!this.canvas) return 0;
+    return Math.max(0, (this._totalVisContentHeight || 0) - this.canvas.clientHeight);
   }
 
   _prepareLayout() {
@@ -368,9 +409,10 @@ class TimelineChart {
   }
 
   _resize() {
+    if (this._isExport) return;
     const parent = this.canvas.parentElement;
     const w = parent.clientWidth;
-    const h = Math.max(parent.clientHeight, this._totalContentHeight);
+    const h = parent.clientHeight;
     this.canvas.width = w * this.dpr;
     this.canvas.height = h * this.dpr;
     this.canvas.style.width = w + 'px';
@@ -380,9 +422,14 @@ class TimelineChart {
 
   _bindEvents() {
     this.canvas.addEventListener('wheel', e => {
+      e.preventDefault();
       if (e.ctrlKey || e.metaKey) {
-        e.preventDefault();
         this._zoomAt(-e.deltaY * 0.003, e.offsetX);
+      } else {
+        let delta = e.deltaY;
+        if (e.deltaMode === 1) delta *= 20;
+        this._scrollY = Math.max(0, Math.min(this._scrollY + delta, this._maxScrollY));
+        this.render();
       }
     }, { passive: false });
 
@@ -671,7 +718,8 @@ class TimelineChart {
 
     ctx.save();
     ctx.beginPath();
-    ctx.rect(labelW, this._headerBottom, w - labelW, this.canvas.height / this.dpr - this._headerBottom);
+    const clipH = Math.max(this.canvas.height / this.dpr, this._totalVisContentHeight || 0) - this._headerBottom;
+    ctx.rect(labelW, this._headerBottom, w - labelW, clipH);
     ctx.clip();
 
     let chCount = 0;
@@ -1071,6 +1119,7 @@ class TimelineChart {
     if (mx < cfg.labelWidth || my < hb) return null;
 
     const effReserve = this._effectiveTextReserveHeight();
+    const adjY = my + this._scrollY;
 
     for (let i = this._visData.length - 1; i >= 0; i--) {
       const item = this._visData[i];
@@ -1078,7 +1127,7 @@ class TimelineChart {
 
       const areaTop = item.y + this._effectiveTextReserveHeight();
       const areaBottom = areaTop + cfg.channelHeight;
-      if (my < areaTop || my > areaBottom) continue;
+      if (adjY < areaTop || adjY > areaBottom) continue;
 
       const ch = item.channel;
       const blocks = ch.blocks || [];
@@ -1102,7 +1151,7 @@ class TimelineChart {
         if (hp >= 0) { by = baseline - bh; }
         else { by = baseline; }
 
-        if (mx >= bx && mx <= bx + bw && my >= by && my <= by + bh) {
+        if (mx >= bx && mx <= bx + bw && adjY >= by && adjY <= by + bh) {
           b._channel = ch;
           return b;
         }
@@ -1115,10 +1164,11 @@ class TimelineChart {
     if (this._visData.length === 0) return null;
     const cfg = this.config;
     const w = this.canvas.clientWidth;
+    const adjY = my + this._scrollY;
 
     for (const item of this._visData) {
       if (item.type !== 'group-header') continue;
-      if (mx >= 0 && mx <= w && my >= item.y && my <= item.y + cfg.groupHeaderHeight) {
+      if (mx >= 0 && mx <= w && adjY >= item.y && adjY <= item.y + cfg.groupHeaderHeight) {
         return item;
       }
     }
