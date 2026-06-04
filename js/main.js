@@ -328,11 +328,61 @@ function syncControls() {
 
 function applyPageTheme(name) {
   const themes = {
-    dark:  { bodyBg: '#0f0f23', toolbarBg: '#1a1a2e', panelBg: '#16162a', text: '#ccc', panelText: '#aaa', borderColor: 'rgba(255,255,255,0.08)' },
-    light: { bodyBg: '#e8e8e8', toolbarBg: '#f0f0f0', panelBg: '#f5f5f5', text: '#333', panelText: '#555', borderColor: 'rgba(0,0,0,0.1)' },
-    blue:  { bodyBg: '#08111a', toolbarBg: '#0d1b2a', panelBg: '#0a1522', text: '#a0c8e8', panelText: '#7a9fbf', borderColor: 'rgba(255,255,255,0.08)' },
-    green: { bodyBg: '#0a140e', toolbarBg: '#0f1a14', panelBg: '#0c1610', text: '#a5d6a7', panelText: '#6a9a6e', borderColor: 'rgba(255,255,255,0.06)' },
-    warm:  { bodyBg: '#16100e', toolbarBg: '#1e1814', panelBg: '#191411', text: '#ffccbc', panelText: '#a68a6d', borderColor: 'rgba(255,255,255,0.06)' },
+    dark: {
+      bodyBg: '#0f0f23', toolbarBg: '#1a1a2e', panelBg: '#16162a',
+      text: '#ccc', panelText: '#aaa', borderColor: 'rgba(255,255,255,0.08)',
+      btnBg: '#2a2a4a', btnHoverBg: '#3a3a5a', activeBtnBg: '#4A90D9', activeBtnText: '#fff',
+      selectBg: '#2a2a4a', sectionBg: 'rgba(255,255,255,0.025)', sectionBorder: 'rgba(255,255,255,0.06)',
+      h3Color: '#eee', h3Bg: 'rgba(255,255,255,0.04)', h3Border: 'rgba(255,255,255,0.06)',
+      h3HoverBg: 'rgba(255,255,255,0.07)', labelColor: '#bbb',
+      toggleBg: '#16162a', toggleHoverBg: '#1e1e38', toggleColor: '#888',
+      helpBg: '#1a1a2e', helpBorder: 'rgba(255,255,255,0.15)', helpColor: '#ccc',
+      accentColor: '#4A90D9',
+    },
+    light: {
+      bodyBg: '#e8e8e8', toolbarBg: '#f0f0f0', panelBg: '#f5f5f5',
+      text: '#333', panelText: '#555', borderColor: 'rgba(0,0,0,0.1)',
+      btnBg: '#e0e0e0', btnHoverBg: '#d0d0d0', activeBtnBg: '#4A90D9', activeBtnText: '#fff',
+      selectBg: '#e0e0e0', sectionBg: '#ffffff', sectionBorder: 'rgba(0,0,0,0.08)',
+      h3Color: '#333', h3Bg: '#f0f0f0', h3Border: 'rgba(0,0,0,0.06)',
+      h3HoverBg: '#e8e8e8', labelColor: '#555',
+      toggleBg: '#f0f0f0', toggleHoverBg: '#e0e0e0', toggleColor: '#888',
+      helpBg: '#f8f8f8', helpBorder: 'rgba(0,0,0,0.15)', helpColor: '#333',
+      accentColor: '#4A90D9',
+    },
+    blue: {
+      bodyBg: '#08111a', toolbarBg: '#0d1b2a', panelBg: '#0a1522',
+      text: '#a0c8e8', panelText: '#7a9fbf', borderColor: 'rgba(93,173,226,0.15)',
+      btnBg: '#0e2035', btnHoverBg: '#122a42', activeBtnBg: '#5DADE2', activeBtnText: '#0d1b2a',
+      selectBg: '#0e2035', sectionBg: 'rgba(93,173,226,0.04)', sectionBorder: 'rgba(93,173,226,0.1)',
+      h3Color: '#d0e4f8', h3Bg: 'rgba(93,173,226,0.08)', h3Border: 'rgba(93,173,226,0.1)',
+      h3HoverBg: 'rgba(93,173,226,0.12)', labelColor: '#8ab8d8',
+      toggleBg: '#0a1522', toggleHoverBg: '#0e2035', toggleColor: '#5DADE2',
+      helpBg: '#0d1b2a', helpBorder: 'rgba(93,173,226,0.2)', helpColor: '#a0c8e8',
+      accentColor: '#5DADE2',
+    },
+    green: {
+      bodyBg: '#0a140e', toolbarBg: '#0f1a14', panelBg: '#0c1610',
+      text: '#a5d6a7', panelText: '#6a9a6e', borderColor: 'rgba(102,187,106,0.15)',
+      btnBg: '#0e1e14', btnHoverBg: '#122518', activeBtnBg: '#66BB6A', activeBtnText: '#0f1a14',
+      selectBg: '#0e1e14', sectionBg: 'rgba(102,187,106,0.04)', sectionBorder: 'rgba(102,187,106,0.1)',
+      h3Color: '#c8e6c9', h3Bg: 'rgba(102,187,106,0.08)', h3Border: 'rgba(102,187,106,0.1)',
+      h3HoverBg: 'rgba(102,187,106,0.12)', labelColor: '#88b88a',
+      toggleBg: '#0c1610', toggleHoverBg: '#0e1e14', toggleColor: '#66BB6A',
+      helpBg: '#0f1a14', helpBorder: 'rgba(102,187,106,0.2)', helpColor: '#a5d6a7',
+      accentColor: '#66BB6A',
+    },
+    warm: {
+      bodyBg: '#16100e', toolbarBg: '#1e1814', panelBg: '#191411',
+      text: '#ffccbc', panelText: '#a68a6d', borderColor: 'rgba(255,138,101,0.15)',
+      btnBg: '#241c16', btnHoverBg: '#2c221a', activeBtnBg: '#FF8A65', activeBtnText: '#1e1814',
+      selectBg: '#241c16', sectionBg: 'rgba(255,138,101,0.04)', sectionBorder: 'rgba(255,138,101,0.1)',
+      h3Color: '#ffe0b2', h3Bg: 'rgba(255,138,101,0.08)', h3Border: 'rgba(255,138,101,0.1)',
+      h3HoverBg: 'rgba(255,138,101,0.12)', labelColor: '#c8a080',
+      toggleBg: '#191411', toggleHoverBg: '#241c16', toggleColor: '#FF8A65',
+      helpBg: '#1e1814', helpBorder: 'rgba(255,138,101,0.2)', helpColor: '#ffccbc',
+      accentColor: '#FF8A65',
+    },
   };
   const t = themes[name] || themes.dark;
   document.body.style.background = t.bodyBg;
@@ -346,9 +396,9 @@ function applyPageTheme(name) {
   const toolbarBtns = document.querySelectorAll('#toolbar button');
   toolbarBtns.forEach(b => {
     if (b.classList.contains('active')) {
-      b.style.background = '#4A90D9'; b.style.color = '#fff';
+      b.style.background = t.activeBtnBg; b.style.color = t.activeBtnText;
     } else {
-      b.style.background = name === 'light' ? '#e0e0e0' : '#2a2a4a';
+      b.style.background = t.btnBg;
       b.style.color = t.text;
     }
     b.style.borderColor = t.borderColor;
@@ -356,33 +406,76 @@ function applyPageTheme(name) {
 
   const selectEls = document.querySelectorAll('#settings-panel select');
   selectEls.forEach(s => {
-    s.style.background = name === 'light' ? '#e0e0e0' : '#2a2a4a';
+    s.style.background = t.selectBg;
     s.style.color = t.text;
-    s.style.borderColor = 'rgba(128,128,128,0.2)';
+    s.style.borderColor = t.borderColor;
   });
 
   const sections = document.querySelectorAll('#settings-panel .section');
   sections.forEach(sec => {
-    sec.style.background = name === 'light' ? '#ffffff' : 'rgba(255,255,255,0.025)';
-    sec.style.borderColor = name === 'light' ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.06)';
+    sec.style.background = t.sectionBg;
+    sec.style.borderColor = t.sectionBorder;
   });
 
   const h3s = document.querySelectorAll('#settings-panel .section h3');
   h3s.forEach(h => {
-    h.style.color = name === 'light' ? '#333' : '#eee';
-    h.style.background = name === 'light' ? '#f0f0f0' : 'rgba(255,255,255,0.04)';
-    h.style.borderBottomColor = name === 'light' ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.06)';
+    h.style.color = t.h3Color;
+    h.style.background = t.h3Bg;
+    h.style.borderBottomColor = t.h3Border;
   });
 
   document.querySelectorAll('#settings-panel label').forEach(l => {
-    l.style.color = name === 'light' ? '#555' : '#bbb';
+    l.style.color = t.labelColor;
+  });
+
+  // Settings toggle button
+  const toggle = document.getElementById('settings-toggle');
+  if (toggle) {
+    toggle.style.background = t.toggleBg;
+    toggle.style.borderColor = t.borderColor;
+    toggle.style.color = t.toggleColor;
+  }
+
+  // Range inputs accent
+  document.querySelectorAll('#settings-panel input[type="range"]').forEach(r => {
+    r.style.accentColor = t.accentColor;
+  });
+  document.querySelectorAll('#settings-panel input[type="checkbox"]').forEach(c => {
+    c.style.accentColor = t.accentColor;
+  });
+
+  // Theme buttons
+  document.querySelectorAll('#settings-panel .theme-btn').forEach(b => {
+    if (b.classList.contains('active')) {
+      b.style.borderColor = t.accentColor;
+      b.style.background = t.activeBtnBg;
+      b.style.color = t.activeBtnText;
+    } else {
+      b.style.borderColor = t.borderColor;
+      b.style.background = t.btnBg;
+      b.style.color = t.text;
+    }
   });
 
   const helpDlg = document.getElementById('help-dialog');
   if (helpDlg) {
-    helpDlg.style.background = name === 'light' ? '#f8f8f8' : '#1a1a2e';
-    helpDlg.style.borderColor = name === 'light' ? 'rgba(0,0,0,0.15)' : 'rgba(255,255,255,0.15)';
-    helpDlg.style.color = name === 'light' ? '#333' : '#ccc';
+    helpDlg.style.background = t.helpBg;
+    helpDlg.style.borderColor = t.helpBorder;
+    helpDlg.style.color = t.helpColor;
+  }
+
+  // Tooltip
+  const tooltip = document.getElementById('tooltip');
+  if (tooltip) {
+    tooltip.style.background = name === 'light' ? 'rgba(255,255,255,0.95)' : t.helpBg;
+    tooltip.style.borderColor = t.helpBorder;
+    tooltip.style.color = t.text;
+    const ttTitle = tooltip.querySelector('.tt-title');
+    if (ttTitle) ttTitle.style.color = t.h3Color;
+    const ttLabels = tooltip.querySelectorAll('.tt-label');
+    ttLabels.forEach(l => l.style.color = t.panelText);
+    const ttValues = tooltip.querySelectorAll('.tt-value');
+    ttValues.forEach(v => v.style.color = t.text);
   }
 }
 

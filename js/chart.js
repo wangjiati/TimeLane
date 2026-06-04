@@ -399,6 +399,18 @@ class TimelineChart {
         eventMarkerColor: '#FF6B6B',
         hoverBorderColor: '#fff',
         labelSeparatorColor: 'rgba(255,255,255,0.08)',
+        selectedHighlightColor: '#4A90D9',
+        cursor1Color: 'rgba(74,144,217,0.7)',
+        cursor2Color: 'rgba(255,107,107,0.7)',
+        cursorLabelBg: 'rgba(20,20,40,0.9)',
+        cursorLabelText: '#fff',
+        cursorLabelBorder: 'rgba(255,255,255,0.15)',
+        cursorDeltaColor: '#4A90D9',
+        cursorBracketColor: 'rgba(255,255,255,0.35)',
+        scrollbarTrackColor: 'rgba(255,255,255,0.04)',
+        scrollbarThumbColor: 'rgba(255,255,255,0.18)',
+        scrollbarThumbActiveColor: 'rgba(255,255,255,0.35)',
+        blockDefaultTextColor: '#fff',
       },
     };
     return {
@@ -846,7 +858,7 @@ class TimelineChart {
       const blockShow = tc.show !== false && cfg.blockTextShow !== false;
       if (blockShow && block.text && bw > 30) {
         const fontSize = cfg.blockFontSize;
-        const fontColor = tc.color || '#fff';
+        const fontColor = tc.color || cfg.theme.blockDefaultTextColor || '#fff';
         ctx.fillStyle = fontColor;
         ctx.font = `${fontSize}px ${cfg.fontFamily}`;
         ctx.textAlign = 'center';
@@ -1003,7 +1015,7 @@ class TimelineChart {
         else { by = baseline; }
 
         ctx.save();
-        ctx.strokeStyle = '#4A90D9';
+        ctx.strokeStyle = t.selectedHighlightColor || '#4A90D9';
         ctx.lineWidth = 2.5;
         ctx.setLineDash([5, 3]);
         this._drawRoundedRect(x - 1, by - 1, bw + 2, bh + 2, cfg.blockBorderRadius + 1);
@@ -1071,25 +1083,25 @@ class TimelineChart {
       ctx.fill();
 
       // Label background
-      ctx.fillStyle = 'rgba(20,20,40,0.9)';
+      ctx.fillStyle = t.cursorLabelBg;
       ctx.fillRect(tx, ty, textW, textH);
-      ctx.strokeStyle = locked ? color : 'rgba(255,255,255,0.15)';
+      ctx.strokeStyle = locked ? color : t.cursorLabelBorder;
       ctx.lineWidth = 1;
       ctx.setLineDash([]);
       ctx.strokeRect(tx, ty, textW, textH);
 
       // Label text
-      ctx.fillStyle = '#fff';
+      ctx.fillStyle = t.cursorLabelText;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(label, x, ty + textH / 2);
     }
 
     if (c1.on && x1 >= 0) {
-      drawCursor.call(this, c1, x1, 'rgba(74,144,217,0.7)');
+      drawCursor.call(this, c1, x1, t.cursor1Color);
     }
     if (c2.on && x2 >= 0) {
-      drawCursor.call(this, c2, x2, 'rgba(255,107,107,0.7)');
+      drawCursor.call(this, c2, x2, t.cursor2Color);
     }
 
     // Delta bracket + duration label when both active
@@ -1104,7 +1116,7 @@ class TimelineChart {
       var deltaStr = formatDuration(deltaMs);
 
       ctx.setLineDash([]);
-      ctx.strokeStyle = 'rgba(255,255,255,0.35)';
+      ctx.strokeStyle = t.cursorBracketColor;
       ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.moveTo(lx, bracketY);
@@ -1121,11 +1133,11 @@ class TimelineChart {
       var tX = midX - tW / 2;
       var tY = bracketY + 8;
 
-      ctx.fillStyle = 'rgba(20,20,40,0.9)';
+      ctx.fillStyle = t.cursorLabelBg;
       ctx.fillRect(tX, tY, tW, tH);
-      ctx.strokeStyle = 'rgba(255,255,255,0.2)';
+      ctx.strokeStyle = t.cursorLabelBorder;
       ctx.strokeRect(tX, tY, tW, tH);
-      ctx.fillStyle = '#4A90D9';
+      ctx.fillStyle = t.cursorDeltaColor;
       ctx.fillText(deltaStr, midX, tY + tH / 2);
     }
 
@@ -1160,14 +1172,15 @@ class TimelineChart {
     const m = this._scrollbarMetrics();
     if (!m) return;
     const ctx = this.ctx;
+    const t = this.config.theme;
 
     // Track
-    ctx.fillStyle = 'rgba(255,255,255,0.04)';
+    ctx.fillStyle = t.scrollbarTrackColor;
     ctx.fillRect(m.trackX, m.trackY, m.trackW, m.trackH);
 
     // Thumb
     const r = Math.min(3, m.trackW / 2, m.thumbH / 2);
-    ctx.fillStyle = this._scrollbarDragging ? 'rgba(255,255,255,0.35)' : 'rgba(255,255,255,0.18)';
+    ctx.fillStyle = this._scrollbarDragging ? t.scrollbarThumbActiveColor : t.scrollbarThumbColor;
     ctx.beginPath();
     ctx.moveTo(m.trackX + 1 + r, m.thumbY);
     ctx.lineTo(m.trackX + m.trackW - 1 - r, m.thumbY);
@@ -1420,7 +1433,7 @@ class TimelineChart {
           const blockShow = tc.show !== false && cfg.blockTextShow !== false;
           if (blockShow && block.text && bw > 30) {
             const fs = cfg.blockFontSize;
-            const fc = tc.color || '#fff';
+            const fc = tc.color || cfg.theme.blockDefaultTextColor || '#fff';
             const pos = cfg.blockTextPosition || 'center';
             const textX = bx + bw / 2;
             let textY, anchor, dv;
@@ -1492,6 +1505,14 @@ class TimelineChart {
         gridLineColor: 'rgba(255,255,255,0.04)', eventMarkerColor: '#FF6B6B',
         hoverBorderColor: '#fff', labelSeparatorColor: 'rgba(255,255,255,0.08)',
         defaultBlockColor: '#4A90D9',
+        selectedHighlightColor: '#4A90D9',
+        cursor1Color: 'rgba(74,144,217,0.7)', cursor2Color: 'rgba(255,107,107,0.7)',
+        cursorLabelBg: 'rgba(20,20,40,0.9)', cursorLabelText: '#fff',
+        cursorLabelBorder: 'rgba(255,255,255,0.15)', cursorDeltaColor: '#4A90D9',
+        cursorBracketColor: 'rgba(255,255,255,0.35)',
+        scrollbarTrackColor: 'rgba(255,255,255,0.04)', scrollbarThumbColor: 'rgba(255,255,255,0.18)',
+        scrollbarThumbActiveColor: 'rgba(255,255,255,0.35)',
+        blockDefaultTextColor: '#fff',
       },
       light: {
         backgroundColor: '#f5f5f5', labelBgColor: '#eeeeee',
@@ -1503,6 +1524,14 @@ class TimelineChart {
         gridLineColor: 'rgba(0,0,0,0.06)', eventMarkerColor: '#E74C3C',
         hoverBorderColor: '#333', labelSeparatorColor: 'rgba(0,0,0,0.08)',
         defaultBlockColor: '#4A90D9',
+        selectedHighlightColor: '#4A90D9',
+        cursor1Color: 'rgba(74,144,217,0.7)', cursor2Color: 'rgba(229,57,53,0.7)',
+        cursorLabelBg: 'rgba(255,255,255,0.92)', cursorLabelText: '#333',
+        cursorLabelBorder: 'rgba(0,0,0,0.15)', cursorDeltaColor: '#4A90D9',
+        cursorBracketColor: 'rgba(0,0,0,0.3)',
+        scrollbarTrackColor: 'rgba(0,0,0,0.04)', scrollbarThumbColor: 'rgba(0,0,0,0.18)',
+        scrollbarThumbActiveColor: 'rgba(0,0,0,0.35)',
+        blockDefaultTextColor: '#333',
       },
       blue: {
         backgroundColor: '#0d1b2a', labelBgColor: '#0a1522',
@@ -1514,6 +1543,14 @@ class TimelineChart {
         gridLineColor: 'rgba(255,255,255,0.04)', eventMarkerColor: '#5DADE2',
         hoverBorderColor: '#a0d8f8', labelSeparatorColor: 'rgba(255,255,255,0.06)',
         defaultBlockColor: '#5DADE2',
+        selectedHighlightColor: '#5DADE2',
+        cursor1Color: 'rgba(93,173,226,0.7)', cursor2Color: 'rgba(255,107,107,0.7)',
+        cursorLabelBg: 'rgba(10,21,34,0.9)', cursorLabelText: '#d0e4f8',
+        cursorLabelBorder: 'rgba(93,173,226,0.3)', cursorDeltaColor: '#5DADE2',
+        cursorBracketColor: 'rgba(160,200,232,0.35)',
+        scrollbarTrackColor: 'rgba(255,255,255,0.04)', scrollbarThumbColor: 'rgba(93,173,226,0.25)',
+        scrollbarThumbActiveColor: 'rgba(93,173,226,0.45)',
+        blockDefaultTextColor: '#fff',
       },
       green: {
         backgroundColor: '#0f1a14', labelBgColor: '#0c1610',
@@ -1525,6 +1562,14 @@ class TimelineChart {
         gridLineColor: 'rgba(255,255,255,0.03)', eventMarkerColor: '#81C784',
         hoverBorderColor: '#a5d6a7', labelSeparatorColor: 'rgba(255,255,255,0.05)',
         defaultBlockColor: '#66BB6A',
+        selectedHighlightColor: '#66BB6A',
+        cursor1Color: 'rgba(102,187,106,0.7)', cursor2Color: 'rgba(255,107,107,0.7)',
+        cursorLabelBg: 'rgba(12,22,16,0.9)', cursorLabelText: '#c8e6c9',
+        cursorLabelBorder: 'rgba(102,187,106,0.3)', cursorDeltaColor: '#66BB6A',
+        cursorBracketColor: 'rgba(165,214,167,0.35)',
+        scrollbarTrackColor: 'rgba(255,255,255,0.04)', scrollbarThumbColor: 'rgba(102,187,106,0.25)',
+        scrollbarThumbActiveColor: 'rgba(102,187,106,0.45)',
+        blockDefaultTextColor: '#fff',
       },
       warm: {
         backgroundColor: '#1e1814', labelBgColor: '#191411',
@@ -1536,6 +1581,14 @@ class TimelineChart {
         gridLineColor: 'rgba(255,255,255,0.03)', eventMarkerColor: '#FFAB91',
         hoverBorderColor: '#ffccbc', labelSeparatorColor: 'rgba(255,255,255,0.05)',
         defaultBlockColor: '#FF8A65',
+        selectedHighlightColor: '#FF8A65',
+        cursor1Color: 'rgba(255,138,101,0.7)', cursor2Color: 'rgba(100,181,246,0.7)',
+        cursorLabelBg: 'rgba(25,20,17,0.9)', cursorLabelText: '#ffe0b2',
+        cursorLabelBorder: 'rgba(255,138,101,0.3)', cursorDeltaColor: '#FF8A65',
+        cursorBracketColor: 'rgba(255,204,188,0.35)',
+        scrollbarTrackColor: 'rgba(255,255,255,0.04)', scrollbarThumbColor: 'rgba(255,138,101,0.25)',
+        scrollbarThumbActiveColor: 'rgba(255,138,101,0.45)',
+        blockDefaultTextColor: '#fff',
       },
     };
   }
