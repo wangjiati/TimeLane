@@ -157,6 +157,18 @@ blockFontSlider.addEventListener('input', () => {
   chart.updateConfig('blockFontSize', v);
 });
 
+document.getElementById('cfg-wireframe').addEventListener('change', (e) => {
+  chart.updateConfig('wireframe', e.target.checked);
+});
+
+const wireframeWidthSlider = document.getElementById('cfg-wireframeWidth');
+const valWireframeWidth = document.getElementById('val-wireframeWidth');
+wireframeWidthSlider.addEventListener('input', () => {
+  const v = parseInt(wireframeWidthSlider.value);
+  valWireframeWidth.textContent = v;
+  chart.updateConfig('wireframeWidth', v);
+});
+
 const timeFontSlider = document.getElementById('cfg-timeFont');
 const valTimeFont = document.getElementById('val-timeFont');
 timeFontSlider.addEventListener('input', () => {
@@ -309,6 +321,9 @@ function syncControls() {
   document.getElementById('val-labelW').textContent = cfg.labelWidth;
   document.getElementById('cfg-timeAxisH').value = cfg.timeAxisHeight;
   document.getElementById('val-timeAxisH').textContent = cfg.timeAxisHeight;
+  document.getElementById('cfg-wireframe').checked = cfg.wireframe;
+  document.getElementById('cfg-wireframeWidth').value = cfg.wireframeWidth;
+  document.getElementById('val-wireframeWidth').textContent = cfg.wireframeWidth;
 }
 
 function applyPageTheme(name) {

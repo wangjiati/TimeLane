@@ -379,6 +379,8 @@ class TimelineChart {
       blockBorderRadius: 3,
       blockBorderWidth: 0,
       blockBorderColor: 'rgba(0,0,0,0.2)',
+      wireframe: false,
+      wireframeWidth: 2,
       theme: {
         backgroundColor: '#1a1a2e',
         labelBgColor: '#16162a',
@@ -825,13 +827,19 @@ class TimelineChart {
 
       const color = block.color || cfg.defaultBlockColor;
       this._drawRoundedRect(x, by, bw, bh, cfg.blockBorderRadius);
-      ctx.fillStyle = color;
-      ctx.fill();
 
-      if (cfg.blockBorderWidth > 0) {
-        ctx.strokeStyle = cfg.blockBorderColor;
-        ctx.lineWidth = cfg.blockBorderWidth;
+      if (cfg.wireframe) {
+        ctx.strokeStyle = color;
+        ctx.lineWidth = cfg.wireframeWidth || 2;
         ctx.stroke();
+      } else {
+        ctx.fillStyle = color;
+        ctx.fill();
+        if (cfg.blockBorderWidth > 0) {
+          ctx.strokeStyle = cfg.blockBorderColor;
+          ctx.lineWidth = cfg.blockBorderWidth;
+          ctx.stroke();
+        }
       }
 
       const tc = (block.textConfig || {});
@@ -1402,7 +1410,11 @@ class TimelineChart {
 
           const color = block.color || cfg.defaultBlockColor;
           const r = cfg.blockBorderRadius;
-          svg += `<rect x="${bx}" y="${by}" width="${bw}" height="${bh}" rx="${r}" ry="${r}" fill="${color}" stroke="${cfg.blockBorderColor}" stroke-width="${cfg.blockBorderWidth}" />\n`;
+          if (cfg.wireframe) {
+            svg += `<rect x="${bx}" y="${by}" width="${bw}" height="${bh}" rx="${r}" ry="${r}" fill="none" stroke="${color}" stroke-width="${cfg.wireframeWidth || 2}" />\n`;
+          } else {
+            svg += `<rect x="${bx}" y="${by}" width="${bw}" height="${bh}" rx="${r}" ry="${r}" fill="${color}" stroke="${cfg.blockBorderColor}" stroke-width="${cfg.blockBorderWidth}" />\n`;
+          }
 
           const tc = block.textConfig || {};
           const blockShow = tc.show !== false && cfg.blockTextShow !== false;
