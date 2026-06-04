@@ -33,6 +33,9 @@ class TimelineChart {
     this._rendering = false;
     this._scrollY = 0;
     this._isExport = false;
+    this._scrollbarDragging = false;
+    this._scrollbarDragStartY = 0;
+    this._scrollbarDragStartScrollY = 0;
 
     this.config = this._mergeConfig({});
 
@@ -260,6 +263,7 @@ class TimelineChart {
       this._drawChartTitle(w);
       this._drawTimeAxis(w);
       this._drawCursorLine();
+      this._drawScrollbar(w, h);
     }
 
     ctx.restore();
@@ -435,6 +439,24 @@ class TimelineChart {
 
     this.canvas.addEventListener('mousedown', e => {
       if (e.button === 0) {
+        // Check scrollbar thumb hit first
+        const m = this._scrollbarMetrics();
+        if (m && e.offsetX >= m.trackX && e.offsetX <= m.trackX + m.trackW &&
+            e.offsetY >= m.thumbY && e.offsetY <= m.thumbY + m.thumbH) {
+          this._scrollbarDragging = true;
+          this._scrollbarDragStartY = e.clientY;
+          this._scrollbarDragStartScrollY = this._scrollY;
+          this.render();
+          return;
+        }
+        // Click on track (not thumb) → jump scroll
+        if (m && e.offsetX >= m.trackX && e.offsetX <= m.trackX + m.trackW &&
+            e.offsetY >= m.trackY && e.offsetY <= m.trackY + m.trackH) {
+          const ratio = (e.offsetY - m.trackY - m.thumbH / 2) / (m.trackH - m.thumbH);
+          this._scrollY = Math.max(0, Math.min(ratio * this._maxScrollY, this._maxScrollY));
+          this.render();
+          return;
+        }
         this.isDragging = true;
         this.dragStartX = e.offsetX;
         this.dragViewStart = this.viewStart;
@@ -444,6 +466,10 @@ class TimelineChart {
     });
 
     window.addEventListener('mouseup', () => {
+      if (this._scrollbarDragging) {
+        this._scrollbarDragging = false;
+        this.render();
+      }
       if (this.isDragging) {
         this.isDragging = false;
         this.canvas.style.cursor = 'default';
@@ -453,6 +479,17 @@ class TimelineChart {
     this.canvas.addEventListener('mousemove', e => {
       this.mouseX = e.offsetX;
       this.mouseY = e.offsetY;
+      if (this._scrollbarDragging) {
+        const m = this._scrollbarMetrics();
+        if (m) {
+          const dy = e.clientY - this._scrollbarDragStartY;
+          const scrollRange = m.trackH - m.thumbH;
+          const ratio = scrollRange > 0 ? dy / scrollRange : 0;
+          this._scrollY = Math.max(0, Math.min(this._scrollbarDragStartScrollY + ratio * this._maxScrollY, this._maxScrollY));
+          this.render();
+        }
+        return;
+      }
       if (this.isDragging) {
         const dx = e.offsetX - this.dragStartX;
         const rangeMs = this.dragViewEnd - this.dragViewStart;
@@ -1093,6 +1130,48 @@ class TimelineChart {
     var chartW = this.canvas.width / this.dpr - labelW;
     var ratio = (x - labelW) / chartW;
     return this.viewStart + ratio * (this.viewEnd - this.viewStart);
+  }
+
+  _scrollbarMetrics() {
+    const trackW = 8;
+    const headerH = this._headerBottom;
+    const w = this.canvas.clientWidth;
+    const h = this.canvas.clientHeight;
+    const trackH = h - headerH;
+    const contentH = (this._totalVisContentHeight || 0) - headerH;
+    if (contentH <= 0 || trackH <= 0) return null;
+    const viewRatio = trackH / contentH;
+    if (viewRatio >= 1) return null;
+    const thumbH = Math.max(24, trackH * viewRatio);
+    const scrollRatio = this._maxScrollY > 0 ? this._scrollY / this._maxScrollY : 0;
+    const thumbY = headerH + scrollRatio * (trackH - thumbH);
+    return { trackX: w - trackW, trackY: headerH, trackW, trackH, thumbY, thumbH };
+  }
+
+  _drawScrollbar(w, h) {
+    const m = this._scrollbarMetrics();
+    if (!m) return;
+    const ctx = this.ctx;
+
+    // Track
+    ctx.fillStyle = 'rgba(255,255,255,0.04)';
+    ctx.fillRect(m.trackX, m.trackY, m.trackW, m.trackH);
+
+    // Thumb
+    const r = Math.min(3, m.trackW / 2, m.thumbH / 2);
+    ctx.fillStyle = this._scrollbarDragging ? 'rgba(255,255,255,0.35)' : 'rgba(255,255,255,0.18)';
+    ctx.beginPath();
+    ctx.moveTo(m.trackX + 1 + r, m.thumbY);
+    ctx.lineTo(m.trackX + m.trackW - 1 - r, m.thumbY);
+    ctx.arcTo(m.trackX + m.trackW - 1, m.thumbY, m.trackX + m.trackW - 1, m.thumbY + r, r);
+    ctx.lineTo(m.trackX + m.trackW - 1, m.thumbY + m.thumbH - r);
+    ctx.arcTo(m.trackX + m.trackW - 1, m.thumbY + m.thumbH, m.trackX + m.trackW - 1 - r, m.thumbY + m.thumbH, r);
+    ctx.lineTo(m.trackX + 1 + r, m.thumbY + m.thumbH);
+    ctx.arcTo(m.trackX + 1, m.thumbY + m.thumbH, m.trackX + 1, m.thumbY + m.thumbH - r, r);
+    ctx.lineTo(m.trackX + 1, m.thumbY + r);
+    ctx.arcTo(m.trackX + 1, m.thumbY, m.trackX + 1 + r, m.thumbY, r);
+    ctx.closePath();
+    ctx.fill();
   }
 
   _drawRoundedRect(x, y, w, h, r) {

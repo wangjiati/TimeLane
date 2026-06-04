@@ -399,3 +399,18 @@ function formatTimeShort(ts) {
 function escapeHtml(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
+
+// Settings panel collapse/expand
+const settingsPanel = document.getElementById('settings-panel');
+const settingsToggle = document.getElementById('settings-toggle');
+settingsToggle.addEventListener('click', () => {
+  const collapsed = settingsPanel.classList.toggle('collapsed');
+  settingsToggle.textContent = collapsed ? '▶' : '◀';
+});
+
+// Section collapse/expand
+document.querySelectorAll('#settings-panel .section h3').forEach(h3 => {
+  h3.addEventListener('click', () => {
+    h3.parentElement.classList.toggle('collapsed');
+  });
+});

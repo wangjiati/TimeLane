@@ -60,6 +60,37 @@ body {
   background: rgba(255,255,255,0.04);
   border-bottom: 1px solid rgba(255,255,255,0.06);
   border-radius: 6px 6px 0 0;
+  cursor: pointer; user-select: none;
+  display: flex; align-items: center; justify-content: space-between;
+}
+#settings-panel .section h3::after {
+  content: '▾'; font-size: 11px; color: #888; transition: transform 0.15s;
+}
+#settings-panel .section.collapsed h3::after {
+  transform: rotate(-90deg);
+}
+#settings-panel .section.collapsed h3 {
+  border-bottom: none; border-radius: 6px; margin-bottom: 0;
+}
+#settings-panel .section.collapsed > *:not(h3) {
+  display: none;
+}
+#settings-panel .section h3:hover {
+  background: rgba(255,255,255,0.07);
+}
+#settings-toggle {
+  flex-shrink: 0; width: 18px; height: 48px; align-self: center;
+  background: #16162a; border: 1px solid rgba(255,255,255,0.08);
+  border-right: none; border-radius: 6px 0 0 6px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  color: #888; font-size: 12px; z-index: 5;
+  transition: background 0.15s, color 0.15s;
+}
+#settings-toggle:hover { background: #1e1e38; color: #fff; }
+#settings-panel { position: relative; transition: width 0.2s, padding 0.2s, opacity 0.2s; overflow: hidden; }
+#settings-panel.collapsed {
+  width: 0 !important; padding: 0 !important; opacity: 0;
+  border-left: none;
 }
 #settings-panel label {
   display: flex; align-items: center; justify-content: space-between;
@@ -168,6 +199,8 @@ body {
   <div id="chart-wrap">
     <canvas id="chart"></canvas>
   </div>
+
+  <div id="settings-toggle" title="收起/展开设置面板">◀</div>
 
   <div id="settings-panel">
     <div class="section">
