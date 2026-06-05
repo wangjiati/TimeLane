@@ -984,6 +984,7 @@ class TimelineChart {
 
     const ctx = this.ctx;
     const cfg = this.config;
+    const t = cfg.theme;
     const effReserve = this._effectiveTextReserveHeight();
 
     for (const item of this._visData) {
@@ -1043,6 +1044,7 @@ class TimelineChart {
 
     var ctx = this.ctx;
     var cfg = this.config;
+    var t = cfg.theme;
     var w = this.canvas.width / this.dpr;
     var h = this.canvas.height / this.dpr;
     var hb = this._headerBottom;
